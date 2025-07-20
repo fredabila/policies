@@ -1,101 +1,179 @@
 import React from 'react';
-import { Target, Zap, Globe, Users } from 'lucide-react';
+import { Target, Zap, Globe, Users, Star, Sparkles, ArrowRight } from 'lucide-react';
 
 export const VisionStatement: React.FC = () => {
   const visionPoints = [
     {
-      icon: <Target className="h-8 w-8 text-orange-500" />,
+      icon: <Target className="h-8 w-8 text-green-600" />,
       title: 'Strategic Focus',
-      description: 'Targeted initiatives that address the most pressing needs of CS&E students with measurable outcomes.'
+      description: 'Targeted initiatives with measurable outcomes'
     },
     {
-      icon: <Zap className="h-8 w-8 text-orange-500" />,
+      icon: <Zap className="h-8 w-8 text-green-600" />,
       title: 'Innovation Drive',
-      description: 'Fostering a culture of creativity and technological advancement through cutting-edge programs.'
+      description: 'Cutting-edge programs and solutions'
     },
     {
-      icon: <Globe className="h-8 w-8 text-orange-500" />,
+      icon: <Globe className="h-8 w-8 text-green-600" />,
       title: 'Global Perspective',
-      description: 'Preparing students for international opportunities and connecting with global tech communities.'
+      description: 'International opportunities and connections'
     },
     {
-      icon: <Users className="h-8 w-8 text-orange-500" />,
+      icon: <Users className="h-8 w-8 text-green-600" />,
       title: 'Inclusive Community',
-      description: 'Building a supportive environment where every student can thrive regardless of their background.'
+      description: 'Every student can thrive and succeed'
     }
   ];
 
   return (
-    <section id="vision" className="py-20 bg-slate-50">
+    <section id="vision" className="py-20 bg-gradient-to-br from-green-50 via-white to-green-100">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Vision for ACSES</h2>
-          <div className="w-20 h-1 bg-orange-500 mx-auto mb-8"></div>
+          <div className="inline-flex items-center gap-2 bg-green-100 rounded-full px-6 py-2 mb-6">
+            <Star className="h-5 w-5 text-green-600" />
+            <span className="text-green-700 font-medium">Our Vision</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">
+            World-Class ACSES
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg text-green-600">
+            Creating excellence in student experience
+          </p>
         </div>
         
+        {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
-              Transforming ACSES into a World-Class Student Association
-            </h3>
-            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              We envision an ACSES that serves as a model for student associations globally. Our vision is to create 
-              an ecosystem where every Computer Science and Engineering student has access to exceptional resources, 
-              opportunities, and support systems that enable them to excel academically, professionally, and personally.
-            </p>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Through strategic partnerships, innovative programs, and student-centered policies, we will build a 
-              community that not only meets current needs but anticipates and prepares for future challenges in 
-              the rapidly evolving tech landscape.
-            </p>
-            
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h4 className="font-bold text-blue-900 mb-3">Our Commitment</h4>
-              <p className="text-slate-600">
-                "We commit to transparent leadership, regular progress updates, and measurable results. 
-                Every policy we implement will be evaluated for its impact on student success and satisfaction."
-              </p>
-              <div className="mt-4 flex items-center">
-                <div className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                  SK
-                </div>
-                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                  FA
-                </div>
-                <span className="text-sm text-slate-600">Samuel & Frederick</span>
+          {/* Left: Visual Content */}
+          <div className="relative">
+            {/* Main visual container */}
+            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-8 relative overflow-hidden">
+              {/* Background decorations */}
+              <div className="absolute inset-0">
+                <div className="absolute top-4 right-6 w-16 h-16 bg-green-300/30 rounded-full"></div>
+                <div className="absolute bottom-6 left-4 w-20 h-20 bg-green-400/20 rounded-full"></div>
+                <Star className="absolute top-6 left-6 h-6 w-6 text-green-300/50" />
+                <Sparkles className="absolute bottom-4 right-4 h-8 w-8 text-green-300/50" />
               </div>
+              
+              <div className="relative z-10 text-center text-white">
+                <div className="mb-6">
+                  <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto shadow-xl">
+                    <Globe className="h-12 w-12 text-green-600" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Transform ACSES</h3>
+                <p className="text-green-100 mb-6">
+                  Building a model student association for the future
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white/20 backdrop-blur-sm rounded-xl p-3">
+                    <div className="text-xl font-bold text-green-200">Excellence</div>
+                    <div className="text-green-100 text-xs">In everything we do</div>
+                  </div>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-xl p-3">
+                    <div className="text-xl font-bold text-green-200">Innovation</div>
+                    <div className="text-green-100 text-xs">Leading the way</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Floating elements */}
+            <div className="absolute -top-4 -right-4 bg-white border-4 border-green-500 rounded-full p-3 shadow-xl">
+              <Target className="h-6 w-6 text-green-600" />
+            </div>
+            <div className="absolute -bottom-4 -left-4 bg-green-300 rounded-full p-3 shadow-lg">
+              <Users className="h-6 w-6 text-green-800" />
             </div>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {visionPoints.map((point, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="mb-4">
-                  {point.icon}
+          {/* Right: Vision Points */}
+          <div>
+            <h3 className="text-3xl font-bold text-green-800 mb-6">
+              Our Commitment
+            </h3>
+            <p className="text-lg text-green-700 mb-8">
+              Creating an ecosystem where every student has access to exceptional opportunities
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              {visionPoints.map((point, index) => (
+                <div 
+                  key={index}
+                  className="bg-white border-2 border-green-200 rounded-2xl p-6 hover:shadow-lg hover:border-green-400 transition-all duration-300 hover:scale-105"
+                >
+                  <div className="mb-4">
+                    <div className="p-3 bg-green-100 rounded-full w-fit">
+                      {point.icon}
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-bold text-green-800 mb-2">{point.title}</h4>
+                  <p className="text-green-600 text-sm">{point.description}</p>
                 </div>
-                <h4 className="text-lg font-bold text-blue-900 mb-2">{point.title}</h4>
-                <p className="text-slate-600 text-sm leading-relaxed">{point.description}</p>
+              ))}
+            </div>
+            
+            {/* Partnership showcase */}
+            <div className="bg-white border-2 border-green-200 rounded-2xl p-6 shadow-sm">
+              <div className="flex items-center mb-4">
+                <div className="flex -space-x-2">
+                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm border-2 border-white">
+                    SK
+                  </div>
+                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm border-2 border-white">
+                    FA
+                  </div>
+                </div>
+                <span className="ml-3 text-green-800 font-semibold">Samuel & Frederick</span>
               </div>
-            ))}
+              <p className="text-green-700 text-sm italic">
+                "Transparent leadership with measurable results for every student"
+              </p>
+            </div>
           </div>
         </div>
         
-        <div className="bg-gradient-to-r from-blue-800 to-blue-900 rounded-xl p-8 md:p-12 text-white">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">2025</div>
-              <div className="text-white/90">Year of Transformation</div>
+        {/* Impact Stats */}
+        <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
+          {/* Background decorations */}
+          <div className="absolute inset-0">
+            <div className="absolute top-4 left-8 w-16 h-16 bg-green-400/20 rounded-full"></div>
+            <div className="absolute bottom-8 right-12 w-20 h-20 bg-green-400/20 rounded-full"></div>
+            <Sparkles className="absolute top-8 right-8 h-8 w-8 text-green-300/50" />
+          </div>
+          
+          <div className="relative z-10">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl md:text-4xl font-bold mb-4">Our Promise</h3>
+              <p className="text-green-100 text-lg max-w-2xl mx-auto">
+                Measurable transformation for ACSES
+              </p>
             </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">100%</div>
-              <div className="text-white/90">Student-Centered Approach</div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                <div className="text-4xl font-bold text-green-200 mb-2">2025</div>
+                <div className="text-green-100">Year of Change</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                <div className="text-4xl font-bold text-green-200 mb-2">100%</div>
+                <div className="text-green-100">Student-Centered</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                <div className="text-4xl font-bold text-green-200 mb-2">∞</div>
+                <div className="text-green-100">Possibilities</div>
+              </div>
             </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">∞</div>
-              <div className="text-white/90">Unlimited Potential</div>
+            
+            <div className="text-center mt-8">
+              <a 
+                href="#feedback" 
+                className="inline-flex items-center gap-2 bg-white text-green-700 font-bold py-3 px-8 rounded-full hover:bg-green-50 transition-all hover:scale-105"
+              >
+                Join Our Vision
+                <ArrowRight className="h-5 w-5" />
+              </a>
             </div>
           </div>
         </div>

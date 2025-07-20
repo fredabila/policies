@@ -23,191 +23,164 @@ export const PolicyOverview: React.FC = () => {
   const pillarsOfACSES = [
     {
       id: 'flexi-net',
-      icon: <Wifi className="h-10 w-10" />,
+      icon: <Wifi className="h-8 w-8" />,
       title: 'FlexiNet',
       subtitle: 'Affordable Internet',
-      description: 'Non-expiry data bundles for all members',
-      color: 'blue',
+      description: 'Non-expiry data bundles',
+      color: 'green',
       path: '/policies/flexi-net'
     },
     {
       id: 'academic-care-fund',
-      icon: <Heart className="h-10 w-10" />,
+      icon: <Heart className="h-8 w-8" />,
       title: 'Boame Fund',
       subtitle: 'Emergency Support',
-      description: 'Financial aid for academic emergencies',
-      color: 'red',
+      description: 'Financial aid for students',
+      color: 'green',
       path: '/policies/academic-care-fund'
     },
     {
       id: 'allawa-plus',
-      icon: <Award className="h-10 w-10" />,
+      icon: <Award className="h-8 w-8" />,
       title: 'Allawa+',
       subtitle: 'Course Rep Support',
-      description: 'Empowering student representatives',
+      description: 'Empowering representatives',
       color: 'green',
       path: '/policies/allawa-plus'
     },
     {
       id: 'tech-ladies',
-      icon: <Users className="h-10 w-10" />,
+      icon: <Users className="h-8 w-8" />,
       title: 'Tech Ladies',
       subtitle: 'Women in Tech',
-      description: 'Mentorship for female students',
-      color: 'purple',
+      description: 'Mentorship program',
+      color: 'green',
       path: '/policies/tech-ladies'
     },
     {
       id: 'sports-fitness',
-      icon: <Dumbbell className="h-10 w-10" />,
+      icon: <Dumbbell className="h-8 w-8" />,
       title: 'Sports Club',
       subtitle: 'Wellness & Unity',
-      description: 'Physical wellness and community',
-      color: 'orange',
+      description: 'Physical wellness',
+      color: 'green',
       path: '/policies/sports-fitness'
     },
     {
       id: 'buildx-program',
-      icon: <Wrench className="h-10 w-10" />,
+      icon: <Wrench className="h-8 w-8" />,
       title: 'BuildX',
       subtitle: 'Life Skills',
-      description: 'Hands-on technical training',
-      color: 'indigo',
+      description: 'Technical training',
+      color: 'green',
       path: '/policies/buildx-program'
     },
     {
       id: 'learn-and-earn',
-      icon: <DollarSign className="h-10 w-10" />,
+      icon: <DollarSign className="h-8 w-8" />,
       title: 'Learn & Earn',
       subtitle: 'Skills Marketplace',
-      description: 'Monetize your talents',
-      color: 'yellow',
+      description: 'Monetize talents',
+      color: 'green',
       path: '/policies/learn-and-earn'
     },
     {
       id: 'creative-studio',
-      icon: <Palette className="h-10 w-10" />,
+      icon: <Palette className="h-8 w-8" />,
       title: 'Creative Studio',
       subtitle: 'Digital Media',
-      description: 'Content creation space',
-      color: 'pink',
+      description: 'Content creation',
+      color: 'green',
       path: '/policies/creative-studio'
     },
     {
       id: 'power-circle',
-      icon: <Network className="h-10 w-10" />,
+      icon: <Network className="h-8 w-8" />,
       title: 'PowerCircle',
       subtitle: 'Alumni Network',
-      description: 'Mentorship & career opportunities',
-      color: 'teal',
+      description: 'Career opportunities',
+      color: 'green',
       path: '/policies/power-circle'
     },
     {
       id: 'defensive-security',
-      icon: <Shield className="h-10 w-10" />,
+      icon: <Shield className="h-8 w-8" />,
       title: 'DefSec Team',
       subtitle: 'Cybersecurity',
-      description: 'Ethical hacking & digital defense',
-      color: 'red',
+      description: 'Digital defense',
+      color: 'green',
       path: '/policies/defensive-security'
     },
     {
       id: 'fab-lab',
-      icon: <Cpu className="h-10 w-10" />,
+      icon: <Cpu className="h-8 w-8" />,
       title: 'Fab Lab',
       subtitle: 'Innovation Hub',
-      description: '3D printing & VR prototyping',
-      color: 'blue',
+      description: '3D printing & VR',
+      color: 'green',
       path: '/policies/fab-lab'
     },
     {
       id: 'launchpad',
-      icon: <Rocket className="h-10 w-10" />,
+      icon: <Rocket className="h-8 w-8" />,
       title: 'LaunchPad',
       subtitle: 'Startup Support',
-      description: 'Turn ideas into businesses',
-      color: 'orange',
+      description: 'Business incubation',
+      color: 'green',
       path: '/policies/launchpad'
     }
   ];
 
   const goldenAIM = {
     id: 'golden-aim',
-    icon: <Smartphone className="h-16 w-16" />,
+    icon: <Smartphone className="h-12 w-12" />,
     title: 'The Golden AIM',
     subtitle: 'Smart System for Smart Generation',
-    description: 'Revolutionary academic management system built by students, for students',
-    color: 'yellow',
+    description: 'Revolutionary academic management built by students',
+    color: 'green',
     path: '/policies/golden-aim'
   };
 
-  const getColorClasses = (color: string) => {
-    const colorMap = {
-      blue: 'from-blue-400/20 to-blue-600/30 border-blue-300/30',
-      red: 'from-red-400/20 to-red-600/30 border-red-300/30',
-      green: 'from-green-400/20 to-green-600/30 border-green-300/30',
-      purple: 'from-purple-400/20 to-purple-600/30 border-purple-300/30',
-      orange: 'from-orange-400/20 to-orange-600/30 border-orange-300/30',
-      indigo: 'from-indigo-400/20 to-indigo-600/30 border-indigo-300/30',
-      yellow: 'from-yellow-400/20 to-yellow-600/30 border-yellow-300/30',
-      pink: 'from-pink-400/20 to-pink-600/30 border-pink-300/30',
-      teal: 'from-teal-400/20 to-teal-600/30 border-teal-300/30'
-    };
-    return colorMap[color as keyof typeof colorMap] || colorMap.blue;
-  };
-
-  const getButtonColorClasses = (color: string) => {
-    const colorMap = {
-      blue: 'from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700',
-      red: 'from-red-500 to-red-600 hover:from-red-600 hover:to-red-700',
-      green: 'from-green-500 to-green-600 hover:from-green-600 hover:to-green-700',
-      purple: 'from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700',
-      orange: 'from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700',
-      indigo: 'from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700',
-      yellow: 'from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700',
-      pink: 'from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700',
-      teal: 'from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700'
-    };
-    return colorMap[color as keyof typeof colorMap] || colorMap.blue;
-  };
-
   return (
-    <section id="policies" className="py-20 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-cyan-50">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+    <section id="policies" className="py-20 relative overflow-hidden bg-gradient-to-br from-green-50 via-white to-green-50">
+      {/* Background decorations */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-green-200/30 rounded-full"></div>
+        <div className="absolute top-40 right-32 w-16 h-16 bg-green-300/40 rounded-full"></div>
+        <div className="absolute bottom-40 left-16 w-24 h-24 bg-green-100/50 rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-20 h-20 bg-green-200/40 rounded-full"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-6">
-            <Sparkles className="h-5 w-5 text-orange-500" />
-            <span className="text-slate-700 font-medium">Our Vision in Action</span>
+          <div className="inline-flex items-center gap-2 bg-green-100 rounded-full px-6 py-2 mb-6">
+            <Sparkles className="h-5 w-5 text-green-600" />
+            <span className="text-green-700 font-medium">Our Vision in Action</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-900 via-purple-800 to-blue-900 bg-clip-text text-transparent mb-6">
-            The 12 Pillars of ACSES
+          <h2 className="text-5xl md:text-6xl font-bold text-green-800 mb-6">
+            Transform ACSES
           </h2>
-          <div className="text-4xl md:text-5xl font-bold text-slate-800 mb-8">
-            & The Golden AIM
+          <div className="text-2xl md:text-3xl font-semibold text-green-600 mb-8 flex items-center justify-center gap-3">
+            <Star className="h-8 w-8 text-green-500" />
+            12 Pillars + Golden AIM
+            <Star className="h-8 w-8 text-green-500" />
           </div>
-          <p className="max-w-2xl mx-auto text-lg text-slate-600 leading-relaxed">
-            Transforming student experience through innovation, support, and opportunity
+          <p className="max-w-2xl mx-auto text-lg text-green-700">
+            Comprehensive solutions for every student
           </p>
         </div>
         
-        {/* Liquid Glass Container for 12 Pillars */}
-        <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-3xl p-8 md:p-12 mb-16 shadow-2xl">
+        {/* 12 Pillars Container */}
+        <div className="bg-white/80 backdrop-blur-sm border-2 border-green-200 rounded-3xl p-8 md:p-12 mb-16 shadow-xl">
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4 flex items-center justify-center gap-3">
-              <Star className="h-8 w-8 text-orange-500" />
+            <h3 className="text-3xl md:text-4xl font-bold text-green-800 mb-4 flex items-center justify-center gap-3">
+              <Star className="h-8 w-8 text-green-500" />
               The 12 Pillars
-              <Star className="h-8 w-8 text-orange-500" />
+              <Star className="h-8 w-8 text-green-500" />
             </h3>
-            <p className="text-slate-600 max-w-xl mx-auto">
-              Comprehensive solutions for every aspect of student life
+            <p className="text-green-600 max-w-xl mx-auto">
+              Building blocks of student success
             </p>
           </div>
           
@@ -218,16 +191,16 @@ export const PolicyOverview: React.FC = () => {
                 to={policy.path}
                 className="group"
               >
-                <div className={`backdrop-blur-md bg-gradient-to-br ${getColorClasses(policy.color)} border rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl`}>
+                <div className="bg-white border-2 border-green-200 hover:border-green-400 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
                   <div className="text-center">
                     <div className="mb-4 flex justify-center">
-                      <div className={`p-3 rounded-xl bg-gradient-to-r ${getButtonColorClasses(policy.color)} text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <div className="p-4 rounded-full bg-green-100 group-hover:bg-green-500 text-green-600 group-hover:text-white transition-all duration-300 shadow-md group-hover:shadow-lg group-hover:scale-110">
                         {policy.icon}
                       </div>
                     </div>
-                    <h4 className="text-lg font-bold text-slate-800 mb-1">{policy.title}</h4>
-                    <p className="text-sm text-slate-600 mb-2">{policy.subtitle}</p>
-                    <p className="text-xs text-slate-500">{policy.description}</p>
+                    <h4 className="text-lg font-bold text-green-800 mb-1">{policy.title}</h4>
+                    <p className="text-sm text-green-600 mb-2 font-medium">{policy.subtitle}</p>
+                    <p className="text-xs text-green-500">{policy.description}</p>
                   </div>
                 </div>
               </Link>
@@ -237,10 +210,10 @@ export const PolicyOverview: React.FC = () => {
 
         {/* Golden AIM - Special Spotlight */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4 flex items-center justify-center gap-3">
-            <Sparkles className="h-8 w-8 text-yellow-500" />
+          <h3 className="text-3xl md:text-4xl font-bold text-green-800 mb-4 flex items-center justify-center gap-3">
+            <Sparkles className="h-8 w-8 text-green-500" />
             The Crown Jewel
-            <Sparkles className="h-8 w-8 text-yellow-500" />
+            <Sparkles className="h-8 w-8 text-green-500" />
           </h3>
         </div>
 
@@ -248,18 +221,26 @@ export const PolicyOverview: React.FC = () => {
           to={goldenAIM.path}
           className="block group"
         >
-          <div className="backdrop-blur-xl bg-gradient-to-br from-yellow-400/30 via-orange-400/20 to-yellow-500/30 border border-yellow-300/40 rounded-3xl p-8 md:p-12 hover:scale-105 transition-all duration-500 hover:shadow-2xl mb-16">
-            <div className="text-center">
+          <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-8 md:p-12 hover:scale-105 transition-all duration-500 hover:shadow-2xl mb-16 relative overflow-hidden">
+            {/* Background decorations */}
+            <div className="absolute inset-0">
+              <div className="absolute top-6 right-8 w-16 h-16 bg-green-300/30 rounded-full"></div>
+              <div className="absolute bottom-8 left-6 w-20 h-20 bg-green-400/20 rounded-full"></div>
+              <Star className="absolute top-4 left-4 h-8 w-8 text-green-300/50" />
+              <Sparkles className="absolute bottom-4 right-4 h-6 w-6 text-green-300/50" />
+            </div>
+            
+            <div className="text-center relative z-10">
               <div className="mb-6 flex justify-center">
-                <div className="p-6 rounded-2xl bg-gradient-to-r from-yellow-500 to-orange-500 text-white shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                <div className="p-6 rounded-2xl bg-white text-green-600 shadow-2xl group-hover:scale-110 transition-transform duration-300">
                   {goldenAIM.icon}
                 </div>
               </div>
-              <h4 className="text-3xl md:text-4xl font-bold text-slate-800 mb-3">{goldenAIM.title}</h4>
-              <p className="text-xl text-slate-700 mb-4">{goldenAIM.subtitle}</p>
-              <p className="text-slate-600 max-w-2xl mx-auto leading-relaxed">{goldenAIM.description}</p>
+              <h4 className="text-4xl md:text-5xl font-bold text-white mb-3">{goldenAIM.title}</h4>
+              <p className="text-xl text-green-100 mb-4">{goldenAIM.subtitle}</p>
+              <p className="text-green-100 max-w-2xl mx-auto leading-relaxed mb-6">{goldenAIM.description}</p>
               
-              <div className="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-bold py-3 px-6 rounded-full group-hover:shadow-lg transition-all">
+              <div className="inline-flex items-center gap-2 bg-white text-green-600 font-bold py-3 px-8 rounded-full group-hover:shadow-xl transition-all group-hover:scale-105">
                 Discover the Future
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </div>
@@ -268,26 +249,35 @@ export const PolicyOverview: React.FC = () => {
         </Link>
         
         {/* Call to Action */}
-        <div className="backdrop-blur-xl bg-gradient-to-r from-slate-800/80 to-slate-900/80 border border-white/20 rounded-3xl p-8 md:p-12 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Ready to Transform ACSES?
-          </h3>
-          <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
-            Join us in building the future of student experience through innovation and community
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="#feedback" 
-              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-3 px-8 rounded-full transition-all hover:shadow-lg hover:scale-105"
-            >
-              Share Your Ideas
-            </a>
-            <a 
-              href="#vision" 
-              className="bg-transparent border-2 border-white/50 text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-all hover:scale-105"
-            >
-              Our Vision
-            </a>
+        <div className="bg-gradient-to-r from-green-700 to-green-800 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
+          {/* Background decorations */}
+          <div className="absolute inset-0">
+            <div className="absolute top-4 left-8 w-12 h-12 bg-green-500/30 rounded-full"></div>
+            <div className="absolute bottom-6 right-8 w-16 h-16 bg-green-400/20 rounded-full"></div>
+            <Sparkles className="absolute top-8 right-12 h-6 w-6 text-green-300/50" />
+          </div>
+          
+          <div className="relative z-10">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Transform ACSES?
+            </h3>
+            <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
+              Join us in building the future of student experience
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="#feedback" 
+                className="bg-white text-green-700 hover:bg-green-50 font-bold py-3 px-8 rounded-full transition-all hover:shadow-lg hover:scale-105"
+              >
+                Share Your Ideas
+              </a>
+              <a 
+                href="#vision" 
+                className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-all hover:scale-105"
+              >
+                Our Vision
+              </a>
+            </div>
           </div>
         </div>
       </div>

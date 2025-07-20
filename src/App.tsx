@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
+import { ScrollToTop } from './components/ScrollToTop';
 import { Home } from './pages/Home';
 import { FlexiNet } from './pages/policies/FlexiNet';
 import { AcademicCareFund } from './pages/policies/AcademicCareFund';
@@ -20,6 +21,7 @@ import { Footer } from './components/Footer';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-slate-50">
         <Header />
         <main>

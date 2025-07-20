@@ -1,55 +1,62 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Award, Users, DollarSign, BookOpen, ArrowLeft, CheckCircle, Star } from 'lucide-react';
+import { Award, Users, DollarSign, BookOpen, ArrowLeft, CheckCircle, Star, Sparkles, Target, Zap } from 'lucide-react';
 
 export const AllawaPlusProgram: React.FC = () => {
   const benefits = [
     {
-      icon: <DollarSign className="h-6 w-6 text-green-600" />,
+      icon: <DollarSign className="h-8 w-8 text-white" />,
       title: 'Monthly Allowance',
-      description: 'Structured financial support for course representatives'
+      description: 'Financial support for reps'
     },
     {
-      icon: <BookOpen className="h-6 w-6 text-green-600" />,
+      icon: <BookOpen className="h-8 w-8 text-white" />,
       title: 'Leadership Training',
-      description: 'Professional development and leadership skills workshops'
+      description: 'Professional development'
     },
     {
-      icon: <Users className="h-6 w-6 text-green-600" />,
-      title: 'Networking Opportunities',
-      description: 'Connect with other leaders and industry professionals'
+      icon: <Users className="h-8 w-8 text-white" />,
+      title: 'Networking',
+      description: 'Connect with professionals'
     },
     {
-      icon: <Award className="h-6 w-6 text-green-600" />,
-      title: 'Recognition Program',
-      description: 'Annual awards for outstanding course representative performance'
+      icon: <Award className="h-8 w-8 text-white" />,
+      title: 'Recognition',
+      description: 'Annual awards program'
     }
   ];
 
   const responsibilities = [
-    'Serve as primary liaison between students and faculty',
-    'Organize and coordinate class meetings and activities',
-    'Collect and communicate student feedback to administration',
-    'Assist with academic and administrative issues',
-    'Participate in ACSES leadership development programs',
-    'Maintain regular communication with assigned mentor',
-    'Submit monthly activity reports and feedback'
+    'Serve as student-faculty liaison',
+    'Organize class meetings and activities',
+    'Collect and communicate feedback',
+    'Assist with academic issues',
+    'Participate in leadership programs',
+    'Submit monthly reports'
   ];
 
   const trainingModules = [
-    'Effective Communication and Public Speaking',
-    'Conflict Resolution and Mediation',
-    'Event Planning and Organization',
-    'Digital Leadership and Social Media',
-    'Academic Advocacy and Student Rights',
-    'Time Management and Productivity'
+    'Communication & Public Speaking',
+    'Conflict Resolution',
+    'Event Planning',
+    'Digital Leadership',
+    'Academic Advocacy',
+    'Time Management'
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-100 pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16 relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute inset-0">
+          <div className="absolute top-8 right-12 w-24 h-24 bg-green-400/20 rounded-full"></div>
+          <div className="absolute bottom-8 left-8 w-32 h-32 bg-green-500/20 rounded-full"></div>
+          <Star className="absolute top-4 left-4 h-8 w-8 text-green-300/50" />
+          <Sparkles className="absolute bottom-4 right-4 h-6 w-6 text-green-300/50" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <Link 
             to="/" 
             className="inline-flex items-center text-green-200 hover:text-white mb-6 transition-colors"
@@ -58,199 +65,305 @@ export const AllawaPlusProgram: React.FC = () => {
             Back to Home
           </Link>
           
-          <div className="flex items-center mb-6">
-            <Award className="h-12 w-12 text-green-200 mr-4" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES Allawa+</h1>
-              <p className="text-xl text-green-200">Course Reps Allowance & Empowerment</p>
+              <div className="flex items-center mb-6">
+                <div className="p-4 bg-green-500 rounded-2xl mr-4">
+                  <Award className="h-12 w-12 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES Allawa+</h1>
+                  <p className="text-xl text-green-200">Course Reps Empowerment</p>
+                </div>
+              </div>
+              
+              <p className="text-lg text-green-100 leading-relaxed mb-8">
+                Empowering course representatives with structured support and fair compensation
+              </p>
+              
+              <div className="grid grid-cols-2 gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="bg-green-500/30 backdrop-blur-sm rounded-xl p-4 text-center">
+                    <div className="mb-2 flex justify-center">
+                      <div className="p-2 bg-green-600 rounded-lg">
+                        {benefit.icon}
+                      </div>
+                    </div>
+                    <h4 className="font-bold text-white text-sm mb-1">{benefit.title}</h4>
+                    <p className="text-xs text-green-100">{benefit.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Visual representation */}
+            <div className="relative">
+              <div className="bg-white rounded-3xl p-8 shadow-2xl">
+                {/* Placeholder for course rep illustration */}
+                <div className="w-full h-64 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-green-500/10"></div>
+                  <div className="relative z-10 text-center">
+                    <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Users className="h-10 w-10 text-white" />
+                    </div>
+                    <div className="text-green-800 font-bold text-lg">Course Representatives</div>
+                    <div className="text-green-600 text-sm">Building Bridges</div>
+                  </div>
+                  {/* Floating elements */}
+                  <div className="absolute top-4 left-4 w-8 h-8 bg-green-300/50 rounded-full"></div>
+                  <div className="absolute bottom-4 right-4 w-6 h-6 bg-green-400/50 rounded-full"></div>
+                </div>
+                
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-green-800 mb-2">Empowered Leadership</h3>
+                  <p className="text-green-600 text-sm">Supporting those who serve</p>
+                </div>
+              </div>
+              
+              {/* Floating badges */}
+              <div className="absolute -top-4 -right-4 bg-green-500 rounded-full p-3 shadow-xl">
+                <Award className="h-6 w-6 text-white" />
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-white border-4 border-green-500 rounded-full p-3 shadow-xl">
+                <Target className="h-6 w-6 text-green-600" />
+              </div>
             </div>
           </div>
-          
-          <p className="text-lg max-w-3xl leading-relaxed">
-            Course representatives are frontline leaders. Allawa+ guarantees structured support and 
-            incentives for Course Reps to function effectively and with integrity—because true 
-            leadership must be empowered, not exploited.
-          </p>
         </div>
       </section>
 
       {/* Main Content */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          {/* Program Overview */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-6">Program Overview</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Program Overview with Visual */}
+          <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-8 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Empowering Student Leaders</h3>
-                <p className="text-slate-600 mb-6">
-                  The Allawa+ Program recognizes that course representatives are essential pillars of 
-                  student governance. By providing structured support, training, and fair compensation, 
-                  we ensure they can serve their classmates effectively while maintaining their own 
-                  academic excellence.
+                <h2 className="text-3xl font-bold text-green-800 mb-6">Program Overview</h2>
+                <p className="text-green-700 mb-6 leading-relaxed">
+                  The Allawa+ Program recognizes course representatives as essential pillars of 
+                  student governance, providing structured support and fair compensation.
                 </p>
                 
-                <div className="bg-green-50 border-l-4 border-green-500 p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Core Philosophy</h4>
-                  <p className="text-green-700 text-sm">
-                    "Leadership is service, and service deserves support. We invest in our course 
-                    representatives because they invest in our community."
+                <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-xl">
+                  <h4 className="font-bold text-green-800 mb-2 flex items-center">
+                    <Sparkles className="h-5 w-5 mr-2" />
+                    Core Philosophy
+                  </h4>
+                  <p className="text-green-700 text-sm italic">
+                    "Leadership is service, and service deserves support"
                   </p>
                 </div>
               </div>
               
-              <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Program Benefits</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="text-center p-4 bg-green-50 rounded-lg">
-                      <div className="mb-2 flex justify-center">
-                        {benefit.icon}
-                      </div>
-                      <h4 className="font-bold text-green-800 text-sm mb-1">{benefit.title}</h4>
-                      <p className="text-xs text-slate-600">{benefit.description}</p>
+              {/* Visual diagram */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-8 text-white">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Users className="h-8 w-8 text-green-600" />
                     </div>
-                  ))}
+                    <h3 className="text-xl font-bold">Support System</h3>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-xl p-3 text-center">
+                      <DollarSign className="h-6 w-6 mx-auto mb-2" />
+                      <div className="text-sm font-semibold">Financial</div>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-xl p-3 text-center">
+                      <BookOpen className="h-6 w-6 mx-auto mb-2" />
+                      <div className="text-sm font-semibold">Training</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Allowance Structure */}
+          {/* Compensation Structure with Visual */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Support & Compensation</h2>
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <p className="text-center text-slate-600 mb-6">
-                We are developing a fair and sustainable compensation structure for course representatives 
-                that recognizes their valuable contributions while ensuring program sustainability. 
-                Details will be finalized through consultation with student representatives and administration.
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-green-800 mb-4">Support & Compensation</h2>
+              <p className="text-green-600 max-w-2xl mx-auto">
+                Fair and sustainable compensation structure under development
               </p>
-              
-              <div className="bg-green-50 rounded-lg p-6 text-center mb-6">
-                <h4 className="font-bold text-green-800 mb-2">Performance Recognition</h4>
-                <p className="text-green-700 text-sm">
-                  Additional incentives will be available for exceptional service, innovative initiatives, 
-                  and outstanding student feedback
-                </p>
+            </div>
+            
+            <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-8">
+              {/* Visual compensation chart */}
+              <div className="mb-8">
+                <div className="bg-gradient-to-r from-green-100 to-green-200 rounded-2xl p-8">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div className="bg-white rounded-xl p-6 shadow-sm">
+                      <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <DollarSign className="h-6 w-6 text-white" />
+                      </div>
+                      <h4 className="font-bold text-green-800 mb-2">Base Support</h4>
+                      <p className="text-green-600 text-sm">Monthly allowance</p>
+                    </div>
+                    <div className="bg-white rounded-xl p-6 shadow-sm">
+                      <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Award className="h-6 w-6 text-white" />
+                      </div>
+                      <h4 className="font-bold text-green-800 mb-2">Performance</h4>
+                      <p className="text-green-600 text-sm">Bonus incentives</p>
+                    </div>
+                    <div className="bg-white rounded-xl p-6 shadow-sm">
+                      <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Star className="h-6 w-6 text-white" />
+                      </div>
+                      <h4 className="font-bold text-green-800 mb-2">Recognition</h4>
+                      <p className="text-green-600 text-sm">Annual awards</p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="text-center">
                 <a 
                   href="/#feedback" 
-                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-block"
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center gap-2"
                 >
-                  Contribute to Compensation Planning
+                  <Zap className="h-5 w-5" />
+                  Contribute to Planning
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Responsibilities & Training */}
+          {/* Responsibilities & Training Visual Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Key Responsibilities</h2>
-              <ul className="space-y-3">
+            <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-8">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-green-600" />
+                </div>
+                <h2 className="text-2xl font-bold text-green-800">Key Responsibilities</h2>
+              </div>
+              
+              <div className="space-y-3">
                 {responsibilities.map((responsibility, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-600">{responsibility}</span>
-                  </li>
+                  <div key={index} className="flex items-center p-3 bg-green-50 rounded-xl">
+                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <span className="text-white font-bold text-sm">{index + 1}</span>
+                    </div>
+                    <span className="text-green-700 text-sm">{responsibility}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Training Modules</h2>
+            <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-8">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="h-8 w-8 text-green-600" />
+                </div>
+                <h2 className="text-2xl font-bold text-green-800">Training Modules</h2>
+              </div>
+              
               <div className="space-y-3">
                 {trainingModules.map((module, index) => (
-                  <div key={index} className="flex items-center p-3 bg-slate-50 rounded-lg">
-                    <div className="bg-green-100 rounded-full w-8 h-8 flex items-center justify-center mr-3">
-                      <span className="text-green-800 font-bold text-sm">{index + 1}</span>
+                  <div key={index} className="bg-green-50 rounded-xl p-4 hover:bg-green-100 transition-colors">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                        <span className="text-white font-bold">{index + 1}</span>
+                      </div>
+                      <span className="text-green-800 font-medium">{module}</span>
                     </div>
-                    <span className="text-slate-700 font-medium">{module}</span>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Selection Process */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Selection & Evaluation Process</h2>
+          {/* Selection Process Visual */}
+          <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-8 mb-12">
+            <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">Selection Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-green-800 font-bold">1</span>
+              {[
+                { step: 1, title: 'Application', desc: 'Submit credentials', icon: <Users className="h-6 w-6" /> },
+                { step: 2, title: 'Interview', desc: 'Panel assessment', icon: <Award className="h-6 w-6" /> },
+                { step: 3, title: 'Training', desc: 'Skills development', icon: <BookOpen className="h-6 w-6" /> },
+                { step: 4, title: 'Service', desc: 'Active representation', icon: <Star className="h-6 w-6" /> }
+              ].map((item, index) => (
+                <div key={index} className="text-center relative">
+                  {index < 3 && (
+                    <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-green-300 z-0"></div>
+                  )}
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+                      {item.icon}
+                    </div>
+                    <h3 className="font-bold text-green-800 mb-2">{item.title}</h3>
+                    <p className="text-sm text-green-600">{item.desc}</p>
+                  </div>
                 </div>
-                <h3 className="font-bold text-green-800 mb-2">Application</h3>
-                <p className="text-sm text-slate-600">Students apply with academic records and leadership experience</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-green-800 font-bold">2</span>
-                </div>
-                <h3 className="font-bold text-green-800 mb-2">Interview</h3>
-                <p className="text-sm text-slate-600">Panel interview assessing communication and leadership skills</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-green-800 font-bold">3</span>
-                </div>
-                <h3 className="font-bold text-green-800 mb-2">Training</h3>
-                <p className="text-sm text-slate-600">Comprehensive orientation and skills development program</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-green-800 font-bold">4</span>
-                </div>
-                <h3 className="font-bold text-green-800 mb-2">Service</h3>
-                <p className="text-sm text-slate-600">Active service with ongoing support and evaluation</p>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Impact Metrics */}
-          <div className="bg-gradient-to-r from-green-800 to-green-900 rounded-xl p-8 text-white mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-center">Expected Outcomes</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold text-green-200 mb-2">50+</div>
-                <div className="text-white/90">Course Representatives</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-green-200 mb-2">90%</div>
-                <div className="text-white/90">Student Satisfaction</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-green-200 mb-2">100%</div>
-                <div className="text-white/90">Training Completion</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-green-200 mb-2">24/7</div>
-                <div className="text-white/90">Student Support</div>
+          {/* Impact Metrics Visual */}
+          <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-8 text-white mb-12 relative overflow-hidden">
+            {/* Background decorations */}
+            <div className="absolute inset-0">
+              <div className="absolute top-4 right-8 w-20 h-20 bg-green-400/20 rounded-full"></div>
+              <div className="absolute bottom-6 left-6 w-16 h-16 bg-green-500/20 rounded-full"></div>
+              <Sparkles className="absolute top-6 left-8 h-8 w-8 text-green-300/50" />
+            </div>
+            
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold mb-8 text-center">Expected Impact</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                  <div className="text-4xl font-bold text-green-200 mb-2">50+</div>
+                  <div className="text-green-100">Course Reps</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                  <div className="text-4xl font-bold text-green-200 mb-2">90%</div>
+                  <div className="text-green-100">Satisfaction</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                  <div className="text-4xl font-bold text-green-200 mb-2">100%</div>
+                  <div className="text-green-100">Training</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                  <div className="text-4xl font-bold text-green-200 mb-2">24/7</div>
+                  <div className="text-green-100">Support</div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Call to Action */}
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Empower Student Leadership</h2>
-            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-              Support the Allawa+ Program and help us build a stronger, more effective student representation system.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/#feedback" 
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Support This Initiative
-              </a>
-              <Link 
-                to="/policies/tech-ladies" 
-                className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Next: Tech Ladies
-              </Link>
+            <div className="bg-white border-2 border-green-200 rounded-3xl p-8 shadow-lg">
+              <div className="mb-6">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-10 w-10 text-green-600" />
+                </div>
+                <h2 className="text-3xl font-bold text-green-800 mb-4">Empower Student Leadership</h2>
+                <p className="text-green-600 mb-8 max-w-2xl mx-auto">
+                  Support the Allawa+ Program and help build stronger student representation
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/#feedback" 
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
+                >
+                  <Sparkles className="h-5 w-5" />
+                  Support This Initiative
+                </a>
+                <Link 
+                  to="/policies/tech-ladies" 
+                  className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
+                >
+                  Next: Tech Ladies
+                  <ArrowLeft className="h-5 w-5 rotate-180" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
