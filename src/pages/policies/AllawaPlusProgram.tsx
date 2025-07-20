@@ -67,12 +67,12 @@ export const AllawaPlusProgram: React.FC = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="flex items-center mb-6">
+          <div className="flex items-center mb-6">
                 <div className="p-4 bg-green-500 rounded-2xl mr-4">
                   <Award className="h-12 w-12 text-white" />
                 </div>
-                <div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES Allawa+</h1>
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES Allawa+</h1>
                   <p className="text-xl text-green-200">Course Reps Empowerment</p>
                 </div>
               </div>
@@ -166,11 +166,11 @@ export const AllawaPlusProgram: React.FC = () => {
                     <h3 className="text-xl font-bold">Support System</h3>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                     <div className="bg-white/20 backdrop-blur-sm rounded-xl p-3 text-center">
                       <DollarSign className="h-6 w-6 mx-auto mb-2" />
                       <div className="text-sm font-semibold">Financial</div>
-                    </div>
+                      </div>
                     <div className="bg-white/20 backdrop-blur-sm rounded-xl p-3 text-center">
                       <BookOpen className="h-6 w-6 mx-auto mb-2" />
                       <div className="text-sm font-semibold">Training</div>
@@ -294,10 +294,10 @@ export const AllawaPlusProgram: React.FC = () => {
                   <div className="relative z-10">
                     <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
                       {item.icon}
-                    </div>
+                </div>
                     <h3 className="font-bold text-green-800 mb-2">{item.title}</h3>
                     <p className="text-sm text-green-600">{item.desc}</p>
-                  </div>
+              </div>
                 </div>
               ))}
             </div>
@@ -322,15 +322,15 @@ export const AllawaPlusProgram: React.FC = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                   <div className="text-4xl font-bold text-green-200 mb-2">90%</div>
                   <div className="text-green-100">Satisfaction</div>
-                </div>
+              </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                   <div className="text-4xl font-bold text-green-200 mb-2">100%</div>
                   <div className="text-green-100">Training</div>
-                </div>
+              </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                   <div className="text-4xl font-bold text-green-200 mb-2">24/7</div>
                   <div className="text-green-100">Support</div>
-                </div>
+              </div>
               </div>
             </div>
           </div>
@@ -345,24 +345,24 @@ export const AllawaPlusProgram: React.FC = () => {
                 <h2 className="text-3xl font-bold text-green-800 mb-4">Empower Student Leadership</h2>
                 <p className="text-green-600 mb-8 max-w-2xl mx-auto">
                   Support the Allawa+ Program and help build stronger student representation
-                </p>
+            </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/#feedback" 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/#feedback" 
                   className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   <Sparkles className="h-5 w-5" />
-                  Support This Initiative
-                </a>
-                <Link 
-                  to="/policies/tech-ladies" 
+                Support This Initiative
+              </a>
+              <Link 
+                to="/policies/tech-ladies" 
                   className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
-                  Next: Tech Ladies
+              >
+                Next: Tech Ladies
                   <ArrowLeft className="h-5 w-5 rotate-180" />
-                </Link>
+              </Link>
               </div>
             </div>
           </div>

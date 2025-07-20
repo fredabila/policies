@@ -1,263 +1,364 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Award, Code, Heart, ArrowLeft, CheckCircle, Star, Zap } from 'lucide-react';
+import { Users, Award, Code, Heart, ArrowLeft, CheckCircle, Star, Zap, Sparkles, Target, Globe, Crown } from 'lucide-react';
 
 export const TechLadies: React.FC = () => {
   const programPillars = [
     {
-      icon: <Users className="h-8 w-8 text-purple-600" />,
+      icon: <Users className="h-8 w-8 text-white" />,
       title: 'Mentorship Network',
-      description: 'Connect with successful women in tech for guidance and career advice'
+      description: 'Connect with tech leaders'
     },
     {
-      icon: <Code className="h-8 w-8 text-purple-600" />,
+      icon: <Code className="h-8 w-8 text-white" />,
       title: 'Skills Development',
-      description: 'Technical workshops and training programs tailored for women'
+      description: 'Technical workshops'
     },
     {
-      icon: <Award className="h-8 w-8 text-purple-600" />,
+      icon: <Award className="h-8 w-8 text-white" />,
       title: 'Leadership Training',
-      description: 'Build confidence and leadership skills for tech industry success'
+      description: 'Build confidence'
     },
     {
-      icon: <Heart className="h-8 w-8 text-purple-600" />,
+      icon: <Heart className="h-8 w-8 text-white" />,
       title: 'Community Support',
-      description: 'Safe space for networking, collaboration, and mutual support'
+      description: 'Safe networking space'
     }
   ];
 
   const initiatives = [
     {
       title: 'Women in Tech Workshops',
-      description: 'Monthly technical workshops led by industry professionals',
-      features: ['Hands-on coding sessions', 'Career guidance talks', 'Industry insights', 'Networking opportunities']
+      description: 'Monthly technical workshops',
+      icon: <Code className="h-8 w-8 text-green-600" />,
+      features: ['Coding sessions', 'Career talks', 'Industry insights', 'Networking']
     },
     {
       title: 'Mentorship Program',
-      description: 'One-on-one mentoring with successful women in technology',
-      features: ['Personal career guidance', 'Industry connections', 'Project collaboration', 'Professional development']
+      description: 'One-on-one mentoring',
+      icon: <Users className="h-8 w-8 text-green-600" />,
+      features: ['Career guidance', 'Industry connections', 'Project collaboration', 'Professional development']
     },
     {
       title: 'Leadership Development',
-      description: 'Building confidence and leadership skills for tech careers',
-      features: ['Public speaking training', 'Team leadership workshops', 'Confidence building sessions', 'Executive presence']
+      description: 'Building confidence & skills',
+      icon: <Crown className="h-8 w-8 text-green-600" />,
+      features: ['Public speaking', 'Team leadership', 'Confidence building', 'Executive presence']
     },
     {
-      title: 'Tech Innovation Challenges',
-      description: 'Women-only hackathons and innovation competitions',
-      features: ['Problem-solving challenges', 'Team collaboration', 'Prize competitions', 'Industry recognition']
+      title: 'Innovation Challenges',
+      description: 'Women-only hackathons',
+      icon: <Zap className="h-8 w-8 text-green-600" />,
+      features: ['Problem-solving', 'Team collaboration', 'Prize competitions', 'Industry recognition']
     }
   ];
 
   const mentorshipTracks = [
-    { track: 'Software Development', focus: 'Full-stack development, mobile apps, web technologies' },
-    { track: 'Data Science & AI', focus: 'Machine learning, data analysis, artificial intelligence' },
-    { track: 'Cybersecurity', focus: 'Information security, ethical hacking, digital forensics' },
-    { track: 'Product Management', focus: 'Product strategy, user experience, project management' },
-    { track: 'Entrepreneurship', focus: 'Startup development, business strategy, innovation' }
-  ];
-
-  const successMetrics = [
-    { metric: 'Participation Rate', target: '80%', description: 'Female students actively engaged' },
-    { metric: 'Skill Advancement', target: '90%', description: 'Participants showing measurable improvement' },
-    { metric: 'Industry Connections', target: '100+', description: 'Professional network contacts made' },
-    { metric: 'Leadership Roles', target: '50%', description: 'Participants taking leadership positions' }
+    { track: 'Software Development', focus: 'Full-stack, mobile, web' },
+    { track: 'Data Science & AI', focus: 'ML, data analysis, AI' },
+    { track: 'Cybersecurity', focus: 'InfoSec, ethical hacking' },
+    { track: 'Product Management', focus: 'Strategy, UX, projects' },
+    { track: 'Entrepreneurship', focus: 'Startups, business, innovation' }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-100 pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-purple-700 text-white py-16">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16 relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute inset-0">
+          <div className="absolute top-8 right-12 w-24 h-24 bg-green-400/20 rounded-full"></div>
+          <div className="absolute bottom-8 left-8 w-32 h-32 bg-green-500/20 rounded-full"></div>
+          <Star className="absolute top-4 left-4 h-8 w-8 text-green-300/50" />
+          <Sparkles className="absolute bottom-4 right-4 h-6 w-6 text-green-300/50" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <Link 
             to="/" 
-            className="inline-flex items-center text-purple-200 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center text-green-200 hover:text-white mb-6 transition-colors"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Home
           </Link>
           
-          <div className="flex items-center mb-6">
-            <Users className="h-12 w-12 text-purple-200 mr-4" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES Tech Ladies</h1>
-              <p className="text-xl text-purple-200">Women Thriving in Tech</p>
+              <div className="flex items-center mb-6">
+                <div className="p-4 bg-green-500 rounded-2xl mr-4">
+                  <Crown className="h-12 w-12 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES Tech Ladies</h1>
+                  <p className="text-xl text-green-200">Empowering Women in Technology</p>
+                </div>
+              </div>
+              
+              <p className="text-lg text-green-100 leading-relaxed mb-8">
+                Creating opportunities, building confidence, and fostering excellence for women in tech
+              </p>
+              
+              <div className="grid grid-cols-2 gap-4">
+                {programPillars.map((pillar, index) => (
+                  <div key={index} className="bg-green-500/30 backdrop-blur-sm rounded-xl p-4 text-center">
+                    <div className="mb-2 flex justify-center">
+                      <div className="p-2 bg-green-600 rounded-lg">
+                        {pillar.icon}
+                      </div>
+                    </div>
+                    <h4 className="font-bold text-white text-sm mb-1">{pillar.title}</h4>
+                    <p className="text-xs text-green-100">{pillar.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Visual representation */}
+            <div className="relative">
+              <div className="bg-white rounded-3xl p-8 shadow-2xl">
+                {/* Women in tech illustration */}
+                <div className="w-full h-64 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-green-500/10"></div>
+                  <div className="relative z-10 text-center">
+                    <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Crown className="h-10 w-10 text-white" />
+                    </div>
+                    <div className="text-green-800 font-bold text-lg mb-2">Tech Ladies Community</div>
+                    <div className="text-green-600 text-sm mb-4">Breaking Barriers Together</div>
+                    
+                    {/* Community representation */}
+                    <div className="flex justify-center space-x-2 mb-4">
+                      <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">♀</span>
+                      </div>
+                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">♀</span>
+                      </div>
+                      <div className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">♀</span>
+                      </div>
+                    </div>
+                    <div className="text-green-700 text-xs font-medium">United in Technology</div>
+                  </div>
+                  {/* Floating empowerment symbols */}
+                  <div className="absolute top-4 left-4 w-8 h-8 bg-green-300/50 rounded-full flex items-center justify-center">
+                    <Star className="h-4 w-4 text-green-700" />
+                  </div>
+                  <div className="absolute bottom-4 right-4 w-6 h-6 bg-green-400/50 rounded-full flex items-center justify-center">
+                    <Crown className="h-3 w-3 text-green-700" />
+                  </div>
+                  <div className="absolute top-8 right-8 w-4 h-4 bg-green-500/50 rounded-full"></div>
+                </div>
+                
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-green-800 mb-2">Women Leading Tech</h3>
+                  <p className="text-green-600 text-sm">Mentorship • Growth • Excellence</p>
+                </div>
+              </div>
+              
+              {/* Floating badges */}
+              <div className="absolute -top-4 -right-4 bg-green-500 rounded-full p-3 shadow-xl">
+                <Crown className="h-6 w-6 text-white" />
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-white border-4 border-green-500 rounded-full p-3 shadow-xl">
+                <Star className="h-6 w-6 text-green-600" />
+              </div>
             </div>
           </div>
-          
-          <p className="text-lg max-w-3xl leading-relaxed">
-            Inclusion isn't symbolic—it's systemic. Tech Ladies delivers mentorship, leadership, and 
-            skills training to support women in tech, championing diversity and equal innovation space 
-            for all female students in Computer Science and Engineering.
-          </p>
         </div>
       </section>
 
       {/* Main Content */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          {/* Program Overview */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-6">Empowering Women in Technology</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Breaking Barriers</h3>
-                <p className="text-slate-600 mb-6">
-                  The tech industry needs diverse perspectives and talents. ACSES Tech Ladies is designed 
-                  to address the unique challenges faced by women in technology fields, providing targeted 
-                  support, mentorship, and opportunities for growth and leadership.
-                </p>
-                
-                <div className="bg-purple-50 border-l-4 border-purple-500 p-4">
-                  <h4 className="font-bold text-purple-800 mb-2">Our Mission</h4>
-                  <p className="text-purple-700 text-sm">
-                    "To create an inclusive environment where women in tech can thrive, lead, and 
-                    inspire the next generation of female technologists."
-                  </p>
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Program Pillars</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {programPillars.map((pillar, index) => (
-                    <div key={index} className="text-center p-4 bg-purple-50 rounded-lg">
-                      <div className="mb-2 flex justify-center">
-                        {pillar.icon}
-                      </div>
-                      <h4 className="font-bold text-purple-800 text-sm mb-1">{pillar.title}</h4>
-                      <p className="text-xs text-slate-600">{pillar.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Key Initiatives */}
+          {/* Program Initiatives */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Key Initiatives</h2>
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-green-800 mb-4">Core Programs</h2>
+              <p className="text-green-600 max-w-2xl mx-auto">
+                Comprehensive support for women pursuing tech careers
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {initiatives.map((initiative, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-bold text-purple-800 mb-3">{initiative.title}</h3>
-                  <p className="text-slate-600 mb-4">{initiative.description}</p>
-                  <ul className="space-y-2">
-                    {initiative.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                        <CheckCircle className="h-4 w-4 text-purple-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
+                <div key={index} className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div className="flex items-center mb-6">
+                    <div className="p-3 bg-green-100 rounded-xl mr-4">
+                      {initiative.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-green-800">{initiative.title}</h3>
+                      <p className="text-green-600 text-sm">{initiative.description}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-3">
+                    {initiative.features.map((feature, idx) => (
+                      <div key={idx} className="bg-green-50 rounded-lg p-3 text-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mx-auto mb-1" />
+                        <span className="text-green-700 text-xs font-medium">{feature}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Mentorship Tracks */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Mentorship Tracks</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-8 mb-12">
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-green-600" />
+              </div>
+              <h2 className="text-3xl font-bold text-green-800 mb-4">Mentorship Tracks</h2>
+              <p className="text-green-600">Specialized guidance paths for different tech careers</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               {mentorshipTracks.map((track, index) => (
-                <div key={index} className="bg-purple-50 rounded-lg p-6 hover:bg-purple-100 transition-colors">
-                  <div className="flex items-center mb-3">
-                    <Star className="h-5 w-5 text-purple-600 mr-2" />
-                    <h3 className="font-bold text-purple-800">{track.track}</h3>
+                <div key={index} className="bg-green-50 rounded-xl p-6 text-center hover:bg-green-100 transition-colors">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold">{index + 1}</span>
                   </div>
-                  <p className="text-sm text-slate-600">{track.focus}</p>
+                  <h4 className="font-bold text-green-800 mb-2 text-sm">{track.track}</h4>
+                  <p className="text-green-600 text-xs">{track.focus}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Program Timeline */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Program Timeline</h2>
+          {/* Success Stories Visual */}
+          <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-8 mb-12">
+            <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">Empowerment Journey</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-800 font-bold">1</span>
+              {[
+                { step: 1, title: 'Join', desc: 'Become part of community', icon: <Heart className="h-6 w-6" /> },
+                { step: 2, title: 'Learn', desc: 'Develop technical skills', icon: <Code className="h-6 w-6" /> },
+                { step: 3, title: 'Lead', desc: 'Build confidence', icon: <Crown className="h-6 w-6" /> },
+                { step: 4, title: 'Excel', desc: 'Achieve tech success', icon: <Star className="h-6 w-6" /> }
+              ].map((item, index) => (
+                <div key={index} className="text-center relative">
+                  {index < 3 && (
+                    <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-green-300 z-0"></div>
+                  )}
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+                      {item.icon}
+                    </div>
+                    <h3 className="font-bold text-green-800 mb-2">{item.title}</h3>
+                    <p className="text-sm text-green-600">{item.desc}</p>
+                  </div>
                 </div>
-                <h3 className="font-bold text-purple-800 mb-2">Recruitment</h3>
-                <p className="text-sm text-slate-600">Open applications and mentor matching</p>
+              ))}
+            </div>
+          </div>
+
+          {/* Community Support Features */}
+          <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-8 mb-12">
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-green-600" />
+              </div>
+              <h2 className="text-3xl font-bold text-green-800 mb-4">Community Benefits</h2>
+              <p className="text-green-600 max-w-2xl mx-auto">
+                Join a supportive network of ambitious women in technology
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-green-50 rounded-xl p-6">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="h-6 w-6 text-white" />
+                  </div>
+                  <h4 className="font-bold text-green-800 mb-2">Networking</h4>
+                  <p className="text-green-600 text-sm">Connect with peers and industry professionals</p>
+                </div>
               </div>
               <div className="text-center">
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-800 font-bold">2</span>
+                <div className="bg-green-50 rounded-xl p-6">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="h-6 w-6 text-white" />
+                  </div>
+                  <h4 className="font-bold text-green-800 mb-2">Recognition</h4>
+                  <p className="text-green-600 text-sm">Celebrate achievements and milestones</p>
                 </div>
-                <h3 className="font-bold text-purple-800 mb-2">Orientation</h3>
-                <p className="text-sm text-slate-600">Program introduction and goal setting</p>
               </div>
               <div className="text-center">
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-800 font-bold">3</span>
+                <div className="bg-green-50 rounded-xl p-6">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Globe className="h-6 w-6 text-white" />
+                  </div>
+                  <h4 className="font-bold text-green-800 mb-2">Opportunities</h4>
+                  <p className="text-green-600 text-sm">Access to internships and job openings</p>
                 </div>
-                <h3 className="font-bold text-purple-800 mb-2">Active Phase</h3>
-                <p className="text-sm text-slate-600">Workshops, mentoring, and skill building</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-purple-800 font-bold">4</span>
-                </div>
-                <h3 className="font-bold text-purple-800 mb-2">Showcase</h3>
-                <p className="text-sm text-slate-600">Project presentations and recognition</p>
               </div>
             </div>
           </div>
 
-          {/* Success Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {successMetrics.map((item, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                <div className="text-3xl font-bold text-purple-600 mb-2">{item.target}</div>
-                <h3 className="font-bold text-slate-800 mb-2">{item.metric}</h3>
-                <p className="text-sm text-slate-600">{item.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Impact Statement */}
-          <div className="bg-gradient-to-r from-purple-800 to-purple-900 rounded-xl p-8 text-white mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-center">Creating Lasting Impact</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div>
-                <Zap className="h-12 w-12 text-purple-200 mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Skill Enhancement</h3>
-                <p className="text-purple-200 text-sm">Advanced technical and leadership skills development</p>
-              </div>
-              <div>
-                <Users className="h-12 w-12 text-purple-200 mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Network Building</h3>
-                <p className="text-purple-200 text-sm">Strong professional networks and mentorship relationships</p>
-              </div>
-              <div>
-                <Award className="h-12 w-12 text-purple-200 mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Career Advancement</h3>
-                <p className="text-purple-200 text-sm">Better job opportunities and leadership positions</p>
+          {/* Impact Metrics Visual */}
+          <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-8 text-white mb-12 relative overflow-hidden">
+            {/* Background decorations */}
+            <div className="absolute inset-0">
+              <div className="absolute top-4 right-8 w-20 h-20 bg-green-400/20 rounded-full"></div>
+              <div className="absolute bottom-6 left-6 w-16 h-16 bg-green-500/20 rounded-full"></div>
+              <Sparkles className="absolute top-6 left-8 h-8 w-8 text-green-300/50" />
+            </div>
+            
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold mb-8 text-center">Expected Impact</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                  <div className="text-4xl font-bold text-green-200 mb-2">200+</div>
+                  <div className="text-green-100">Women Empowered</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                  <div className="text-4xl font-bold text-green-200 mb-2">50+</div>
+                  <div className="text-green-100">Mentors</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                  <div className="text-4xl font-bold text-green-200 mb-2">80%</div>
+                  <div className="text-green-100">Career Growth</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                  <div className="text-4xl font-bold text-green-200 mb-2">100%</div>
+                  <div className="text-green-100">Support</div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Call to Action */}
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Join the Tech Ladies Movement</h2>
-            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-              Support gender diversity in technology and help create equal opportunities for all students.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/#feedback" 
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Support This Initiative
-              </a>
-              <Link 
-                to="/policies/sports-fitness" 
-                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Next: Sports & Fitness
-              </Link>
+            <div className="bg-white border-2 border-green-200 rounded-3xl p-8 shadow-lg">
+              <div className="mb-6">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Crown className="h-10 w-10 text-green-600" />
+                </div>
+                <h2 className="text-3xl font-bold text-green-800 mb-4">Join Tech Ladies</h2>
+                <p className="text-green-600 mb-8 max-w-2xl mx-auto">
+                  Be part of a community that celebrates and empowers women in technology
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/#feedback" 
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
+                >
+                  <Sparkles className="h-5 w-5" />
+                  Support Tech Ladies
+                </a>
+                <Link 
+                  to="/policies/sports-fitness" 
+                  className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
+                >
+                  Next: Sports Club
+                  <ArrowLeft className="h-5 w-5 rotate-180" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
