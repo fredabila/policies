@@ -158,46 +158,7 @@ export const FlexiNet: React.FC = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           {/* Data Plans Visual */}
-          <div className="mb-12">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-green-800 mb-4">FlexiNet Data Plans</h2>
-              <p className="text-green-600 max-w-2xl mx-auto">
-                Choose the perfect plan for your academic needs
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {dataPlans.map((plan, index) => (
-                <div key={index} className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 text-center">
-                  <div className="mb-6">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Globe className="h-8 w-8 text-green-600" />
-                    </div>
-                    <h3 className="text-3xl font-bold text-green-800 mb-2">{plan.size}</h3>
-                    <div className="text-2xl font-bold text-green-600 mb-1">{plan.price}</div>
-                    <div className="text-sm text-green-500 font-medium bg-green-50 px-3 py-1 rounded-full">
-                      {plan.validity}
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    {plan.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center justify-center">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        <span className="text-green-700 text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="mt-6">
-                    <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition-colors">
-                      Choose Plan
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+      
 
           {/* How It Works Visual */}
           <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-8 mb-12">

@@ -77,18 +77,18 @@ export const FeedbackForm: React.FC = () => {
   };
 
   return (
-    <section id="feedback" className="py-20 bg-gradient-to-br from-green-50 via-white to-green-100">
+    <section id="feedback" className="py-16 md:py-20 bg-gradient-to-br from-green-50 via-white to-green-100">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-100 rounded-full px-6 py-2 mb-6">
-            <MessageSquare className="h-5 w-5 text-green-600" />
-            <span className="text-green-700 font-medium">Get in Touch</span>
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-flex items-center gap-2 bg-green-100 rounded-full px-4 md:px-6 py-2 mb-4 md:mb-6">
+            <MessageSquare className="h-4 w-4 md:h-5 md:w-5 text-green-600" />
+            <span className="text-green-700 font-medium text-sm md:text-base">Get in Touch</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-4 md:mb-6">
             Share Your Voice
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-green-600">
+          <p className="max-w-2xl mx-auto text-base md:text-lg text-green-600 px-4">
             Your ideas shape our vision for ACSES
           </p>
         </div>
@@ -136,8 +136,8 @@ export const FeedbackForm: React.FC = () => {
                         <h4 className="font-semibold text-green-200">Direct Contact</h4>
                       </div>
                       <p className="text-green-100 text-sm">
-                        <a href="mailto:topkoder@example.com" className="underline hover:text-white">
-                          topkoder@example.com
+                        <a href="mailto:thekoderfraternity@gmail.com" className="underline hover:text-white">
+                          thekoderfraternity@gmail.com
                         </a>
                       </p>
                     </div>
@@ -145,11 +145,20 @@ export const FeedbackForm: React.FC = () => {
                     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                       <div className="flex items-center mb-2">
                         <Phone className="h-5 w-5 text-green-200 mr-3" />
-                        <h4 className="font-semibold text-green-200">Quick Response</h4>
+                        <h4 className="font-semibold text-green-200">Phone Numbers</h4>
                       </div>
-                      <p className="text-green-100 text-sm">
-                        We review and respond to all submissions within 24 hours
-                      </p>
+                      <div className="text-green-100 text-sm space-y-1">
+                        <div>
+                          <a href="tel:+233542184694" className="underline hover:text-white">
+                            +233 542 184 694
+                          </a>
+                        </div>
+                        <div>
+                          <a href="tel:+233599539127" className="underline hover:text-white">
+                            +233 599 539 127
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   

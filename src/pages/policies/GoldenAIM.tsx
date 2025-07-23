@@ -90,8 +90,8 @@ export const GoldenAIM: React.FC = () => {
                   <Smartphone className="h-12 w-12 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-2">The Golden AIM</h1>
-                  <p className="text-xl text-green-200">Smart System for Smart Generation</p>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES AIM APP</h1>
+                  <p className="text-xl text-green-200">Academic Intelligence & Management</p>
                 </div>
               </div>
               

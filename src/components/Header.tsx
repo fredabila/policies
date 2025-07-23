@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
     { name: 'Defensive Security', href: '/policies/defensive-security' },
     { name: 'Fab Lab', href: '/policies/fab-lab' },
     { name: 'LaunchPad', href: '/policies/launchpad' },
-    { name: 'Golden AIM', href: '/policies/golden-aim' },
+            { name: 'ACSES AIM APP', href: '/policies/golden-aim' },
   ];
 
   return (

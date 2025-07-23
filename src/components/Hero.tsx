@@ -22,76 +22,78 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           {/* Left Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
-            <div className="mb-8">
-              <span className="inline-flex items-center bg-green-100 text-green-700 px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-sm">
-                <Star className="h-4 w-4 mr-2" />
+            <div className="mb-6 md:mb-8">
+              <span className="inline-flex items-center bg-green-100 text-green-700 px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-6 shadow-sm">
+                <Star className="h-3 w-3 md:h-4 md:w-4 mr-2" />
                 ACSES Presidential Campaign 2025
-                <Sparkles className="h-4 w-4 ml-2" />
+                <Sparkles className="h-3 w-3 md:h-4 md:w-4 ml-2" />
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-green-800 leading-tight mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-green-800 leading-tight mb-6 md:mb-8">
               <span className="text-green-600">Transform</span><br />
               <span className="text-green-800">ACSES</span><br />
               <span className="text-green-500">Together</span>
             </h1>
             
-            <div className="text-2xl md:text-3xl text-green-700 font-medium mb-8 flex flex-col lg:flex-row items-center gap-2">
-              <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+            <div className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-green-700 font-medium mb-6 md:mb-8 flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center gap-2 md:gap-3">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm md:text-lg">
                 SK
               </div>
-              <span className="text-green-800">Samuel & Frederick</span>
-              <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                FA
+              <span className="text-green-800 text-base md:text-lg lg:text-xl xl:text-2xl">Samuel & Frederick</span>
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm md:text-lg">
+                FS
               </div>
             </div>
             
-            <p className="text-xl text-green-700 mb-12 max-w-xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-green-700 mb-8 md:mb-12 max-w-xl mx-auto lg:mx-0 px-4 lg:px-0">
               Building a stronger, more innovative ACSES for every student
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center lg:justify-start mb-8 md:mb-12 px-4 lg:px-0">
               <a 
                 href="#policies" 
-                className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 flex items-center justify-center"
+                className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105 flex items-center justify-center text-sm md:text-base"
               >
                 Explore Our Vision
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </a>
               <a 
-                href="#feedback" 
-                className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-4 px-8 rounded-full transition-all flex items-center justify-center"
+                href="https://chat.whatsapp.com/HFGrjDWYzNqEmgj79o4xTh" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-3 md:py-4 px-6 md:px-8 rounded-full transition-all flex items-center justify-center text-sm md:text-base"
               >
                 Join the Movement
-                <Users className="ml-2 h-5 w-5" />
+                <Users className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </a>
             </div>
             
             {/* Simple stats */}
-            <div className="grid grid-cols-3 gap-6 text-center">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm">
-                <div className="text-3xl font-bold text-green-600 mb-1">13</div>
-                <div className="text-green-700 text-sm">Policies</div>
+            <div className="grid grid-cols-3 gap-3 md:gap-6 text-center px-4 lg:px-0">
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-4 shadow-sm">
+                <div className="text-2xl md:text-3xl font-bold text-green-600 mb-1">13</div>
+                <div className="text-green-700 text-xs md:text-sm">Policies</div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm">
-                <div className="text-3xl font-bold text-green-600 mb-1">100%</div>
-                <div className="text-green-700 text-sm">For Students</div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-4 shadow-sm">
+                <div className="text-2xl md:text-3xl font-bold text-green-600 mb-1">100%</div>
+                <div className="text-green-700 text-xs md:text-sm">For Students</div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-sm">
-                <div className="text-3xl font-bold text-green-600 mb-1">2025</div>
-                <div className="text-green-700 text-sm">New Era</div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-4 shadow-sm">
+                <div className="text-2xl md:text-3xl font-bold text-green-600 mb-1">2025</div>
+                <div className="text-green-700 text-xs md:text-sm">New Era</div>
               </div>
             </div>
           </div>
           
           {/* Right Visual Content */}
-          <div className="lg:w-1/2 flex justify-center relative">
-            <div className="relative">
+          <div className="lg:w-1/2 flex justify-center relative mt-8 lg:mt-0">
+            <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg">
               {/* Main image container */}
-              <div className="w-96 md:w-[450px] bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
+              <div className="w-full bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
                 <img 
                   src="https://i.ibb.co/svzgpXSw/Whats-App-Image-2025-07-11-at-20-22-01-dafb65d7.jpg" 
                   alt="Samuel Oppong Kyekyeku & Frederick Abila - ACSES Presidential Campaign"

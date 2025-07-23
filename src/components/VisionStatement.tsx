@@ -26,24 +26,24 @@ export const VisionStatement: React.FC = () => {
   ];
 
   return (
-    <section id="vision" className="py-20 bg-gradient-to-br from-green-50 via-white to-green-100">
+    <section id="vision" className="py-16 md:py-20 bg-gradient-to-br from-green-50 via-white to-green-100">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-100 rounded-full px-6 py-2 mb-6">
-            <Star className="h-5 w-5 text-green-600" />
-            <span className="text-green-700 font-medium">Our Vision</span>
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-flex items-center gap-2 bg-green-100 rounded-full px-4 md:px-6 py-2 mb-4 md:mb-6">
+            <Star className="h-4 w-4 md:h-5 md:w-5 text-green-600" />
+            <span className="text-green-700 font-medium text-sm md:text-base">Our Vision</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-800 mb-4 md:mb-6 px-4">
             World-Class ACSES
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-green-600">
+          <p className="max-w-2xl mx-auto text-base md:text-lg text-green-600 px-4">
             Creating excellence in student experience
           </p>
         </div>
         
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
           {/* Left: Visual Content */}
           <div className="relative">
             {/* Main visual container */}

@@ -134,15 +134,15 @@ export const PolicyOverview: React.FC = () => {
   const goldenAIM = {
     id: 'golden-aim',
     icon: <Smartphone className="h-12 w-12" />,
-    title: 'The Golden AIM',
-    subtitle: 'Smart System for Smart Generation',
+    title: 'ACSES AIM APP',
+    subtitle: 'Academic Intelligence & Management',
     description: 'Revolutionary academic management built by students',
     color: 'green',
     path: '/policies/golden-aim'
   };
 
   return (
-    <section id="policies" className="py-20 relative overflow-hidden bg-gradient-to-br from-green-50 via-white to-green-50">
+    <section id="policies" className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-green-50 via-white to-green-50">
       {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-32 h-32 bg-green-200/30 rounded-full"></div>
@@ -153,53 +153,53 @@ export const PolicyOverview: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-100 rounded-full px-6 py-2 mb-6">
-            <Sparkles className="h-5 w-5 text-green-600" />
-            <span className="text-green-700 font-medium">Our Vision in Action</span>
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-flex items-center gap-2 bg-green-100 rounded-full px-4 md:px-6 py-2 mb-4 md:mb-6">
+            <Sparkles className="h-4 w-4 md:h-5 md:w-5 text-green-600" />
+            <span className="text-green-700 font-medium text-sm md:text-base">Our Vision in Action</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-green-800 mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-green-800 mb-4 md:mb-6 px-4">
             Transform ACSES
           </h2>
-          <div className="text-2xl md:text-3xl font-semibold text-green-600 mb-8 flex items-center justify-center gap-3">
-            <Star className="h-8 w-8 text-green-500" />
-            12 Pillars + Golden AIM
-            <Star className="h-8 w-8 text-green-500" />
+          <div className="text-lg md:text-2xl lg:text-3xl font-semibold text-green-600 mb-6 md:mb-8 flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-3 px-4">
+            <Star className="h-6 w-6 md:h-8 md:w-8 text-green-500" />
+            <span className="text-center">12 Pillars + ACSES AIM</span>
+            <Star className="h-6 w-6 md:h-8 md:w-8 text-green-500" />
           </div>
-          <p className="max-w-2xl mx-auto text-lg text-green-700">
+          <p className="max-w-2xl mx-auto text-base md:text-lg text-green-700 px-4">
             Comprehensive solutions for every student
           </p>
         </div>
         
         {/* 12 Pillars Container */}
-        <div className="bg-white/80 backdrop-blur-sm border-2 border-green-200 rounded-3xl p-8 md:p-12 mb-16 shadow-xl">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-green-800 mb-4 flex items-center justify-center gap-3">
-              <Star className="h-8 w-8 text-green-500" />
-              The 12 Pillars
-              <Star className="h-8 w-8 text-green-500" />
+        <div className="bg-white/80 backdrop-blur-sm border-2 border-green-200 rounded-3xl p-6 md:p-8 lg:p-12 mb-12 md:mb-16 shadow-xl">
+          <div className="text-center mb-8 md:mb-12">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-800 mb-4 flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-3">
+              <Star className="h-6 w-6 md:h-8 md:w-8 text-green-500" />
+              <span>The 12 Pillars</span>
+              <Star className="h-6 w-6 md:h-8 md:w-8 text-green-500" />
             </h3>
-            <p className="text-green-600 max-w-xl mx-auto">
+            <p className="text-green-600 max-w-xl mx-auto text-sm md:text-base px-4">
               Building blocks of student success
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {pillarsOfACSES.map((policy, index) => (
               <Link
                 key={policy.id}
                 to={policy.path}
                 className="group"
               >
-                <div className="bg-white border-2 border-green-200 hover:border-green-400 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                <div className="bg-white border-2 border-green-200 hover:border-green-400 rounded-2xl p-4 md:p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl">
                   <div className="text-center">
-                    <div className="mb-4 flex justify-center">
-                      <div className="p-4 rounded-full bg-green-100 group-hover:bg-green-500 text-green-600 group-hover:text-white transition-all duration-300 shadow-md group-hover:shadow-lg group-hover:scale-110">
+                    <div className="mb-3 md:mb-4 flex justify-center">
+                      <div className="p-3 md:p-4 rounded-full bg-green-100 group-hover:bg-green-500 text-green-600 group-hover:text-white transition-all duration-300 shadow-md group-hover:shadow-lg group-hover:scale-110">
                         {policy.icon}
                       </div>
                     </div>
-                    <h4 className="text-lg font-bold text-green-800 mb-1">{policy.title}</h4>
-                    <p className="text-sm text-green-600 mb-2 font-medium">{policy.subtitle}</p>
+                    <h4 className="text-base md:text-lg font-bold text-green-800 mb-1">{policy.title}</h4>
+                    <p className="text-xs md:text-sm text-green-600 mb-2 font-medium">{policy.subtitle}</p>
                     <p className="text-xs text-green-500">{policy.description}</p>
                   </div>
                 </div>
@@ -208,12 +208,12 @@ export const PolicyOverview: React.FC = () => {
           </div>
         </div>
 
-        {/* Golden AIM - Special Spotlight */}
-        <div className="text-center mb-12">
-          <h3 className="text-3xl md:text-4xl font-bold text-green-800 mb-4 flex items-center justify-center gap-3">
-            <Sparkles className="h-8 w-8 text-green-500" />
-            The Crown Jewel
-            <Sparkles className="h-8 w-8 text-green-500" />
+        {/* ACSES AIM - Special Spotlight */}
+        <div className="text-center mb-8 md:mb-12">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-800 mb-4 flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-3 px-4">
+            <Sparkles className="h-6 w-6 md:h-8 md:w-8 text-green-500" />
+            <span>The Crown Jewel</span>
+            <Sparkles className="h-6 w-6 md:h-8 md:w-8 text-green-500" />
           </h3>
         </div>
 
@@ -221,7 +221,7 @@ export const PolicyOverview: React.FC = () => {
           to={goldenAIM.path}
           className="block group"
         >
-          <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-8 md:p-12 hover:scale-105 transition-all duration-500 hover:shadow-2xl mb-16 relative overflow-hidden">
+          <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-6 md:p-8 lg:p-12 hover:scale-105 transition-all duration-500 hover:shadow-2xl mb-12 md:mb-16 relative overflow-hidden">
             {/* Background decorations */}
             <div className="absolute inset-0">
               <div className="absolute top-6 right-8 w-16 h-16 bg-green-300/30 rounded-full"></div>
@@ -231,18 +231,18 @@ export const PolicyOverview: React.FC = () => {
             </div>
             
             <div className="text-center relative z-10">
-              <div className="mb-6 flex justify-center">
-                <div className="p-6 rounded-2xl bg-white text-green-600 shadow-2xl group-hover:scale-110 transition-transform duration-300">
+              <div className="mb-4 md:mb-6 flex justify-center">
+                <div className="p-4 md:p-6 rounded-2xl bg-white text-green-600 shadow-2xl group-hover:scale-110 transition-transform duration-300">
                   {goldenAIM.icon}
                 </div>
               </div>
-              <h4 className="text-4xl md:text-5xl font-bold text-white mb-3">{goldenAIM.title}</h4>
-              <p className="text-xl text-green-100 mb-4">{goldenAIM.subtitle}</p>
-              <p className="text-green-100 max-w-2xl mx-auto leading-relaxed mb-6">{goldenAIM.description}</p>
+              <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 px-4">{goldenAIM.title}</h4>
+              <p className="text-lg md:text-xl text-green-100 mb-4 px-4">{goldenAIM.subtitle}</p>
+              <p className="text-green-100 max-w-2xl mx-auto leading-relaxed mb-6 text-sm md:text-base px-4">{goldenAIM.description}</p>
               
-              <div className="inline-flex items-center gap-2 bg-white text-green-600 font-bold py-3 px-8 rounded-full group-hover:shadow-xl transition-all group-hover:scale-105">
+              <div className="inline-flex items-center gap-2 bg-white text-green-600 font-bold py-3 px-6 md:px-8 rounded-full group-hover:shadow-xl transition-all group-hover:scale-105 text-sm md:text-base">
                 Discover the Future
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
           </div>

@@ -16,8 +16,6 @@ import { DefensiveSecurity } from './pages/policies/DefensiveSecurity';
 import { FabLab } from './pages/policies/FabLab';
 import { LaunchPad } from './pages/policies/LaunchPad';
 import { GoldenAIM } from './pages/policies/GoldenAIM';
-import { Footer } from './components/Footer';
-
 function App() {
   return (
     <Router>
@@ -42,7 +40,6 @@ function App() {
             <Route path="/policies/golden-aim" element={<GoldenAIM />} />
           </Routes>
         </main>
-        <Footer />
       </div>
     </Router>
   );

@@ -1,280 +1,325 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Dumbbell, Heart, Users, Trophy, ArrowLeft, CheckCircle, Activity, Target } from 'lucide-react';
+import { Dumbbell, Heart, Users, Trophy, ArrowLeft, CheckCircle, Activity, Target, Sparkles, Star, Zap, Globe } from 'lucide-react';
 
 export const SportsAndFitness: React.FC = () => {
   const clubActivities = [
     {
-      icon: <Dumbbell className="h-6 w-6 text-orange-600" />,
+      icon: <Dumbbell className="h-8 w-8 text-white" />,
       title: 'Fitness Training',
-      description: 'Regular gym sessions and fitness programs for all levels'
+      description: 'Gym sessions & programs'
     },
     {
-      icon: <Users className="h-6 w-6 text-orange-600" />,
+      icon: <Users className="h-8 w-8 text-white" />,
       title: 'Team Sports',
-      description: 'Football, basketball, volleyball, and other team activities'
+      description: 'Football, basketball, more'
     },
     {
-      icon: <Activity className="h-6 w-6 text-orange-600" />,
+      icon: <Activity className="h-8 w-8 text-white" />,
       title: 'Wellness Programs',
-      description: 'Yoga, meditation, and mental wellness activities'
+      description: 'Yoga, meditation, wellness'
     },
     {
-      icon: <Trophy className="h-6 w-6 text-orange-600" />,
+      icon: <Trophy className="h-8 w-8 text-white" />,
       title: 'Competitions',
-      description: 'Inter-department tournaments and fitness challenges'
+      description: 'Tournaments & challenges'
     }
   ];
 
   const programs = [
     {
       title: 'Daily Fitness Sessions',
-      description: 'Morning and evening workout sessions for all fitness levels',
-      features: ['Cardio workouts', 'Strength training', 'Group fitness classes', 'Personal training']
+      description: 'Morning & evening workouts',
+      icon: <Dumbbell className="h-8 w-8 text-green-600" />,
+      features: ['Cardio workouts', 'Strength training', 'Group classes', 'Personal training']
     },
     {
       title: 'Sports Leagues',
-      description: 'Organized leagues and tournaments for various sports',
-      features: ['Football league', 'Basketball tournaments', 'Table tennis competitions', 'Esports events']
+      description: 'Organized tournaments',
+      icon: <Trophy className="h-8 w-8 text-green-600" />,
+      features: ['Football league', 'Basketball tournaments', 'Table tennis', 'Esports events']
     },
     {
       title: 'Wellness Workshops',
-      description: 'Educational programs on health, nutrition, and mental wellness',
-      features: ['Nutrition seminars', 'Stress management', 'Sleep hygiene', 'Mental health awareness']
+      description: 'Health & nutrition education',
+      icon: <Heart className="h-8 w-8 text-green-600" />,
+      features: ['Nutrition seminars', 'Stress management', 'Sleep hygiene', 'Mental health']
     },
     {
       title: 'Outdoor Adventures',
-      description: 'Hiking, camping, and outdoor recreational activities',
+      description: 'Hiking & recreational activities',
+      icon: <Activity className="h-8 w-8 text-green-600" />,
       features: ['Weekend hikes', 'Camping trips', 'Nature walks', 'Adventure challenges']
     }
   ];
 
-  const benefits = [
-    'Improved physical health and fitness',
-    'Better mental health and stress management',
-    'Enhanced social connections and teamwork',
-    'Increased energy and academic performance',
-    'Leadership and organizational skills development',
-    'Work-life balance and time management'
+  const facilities = [
+    'Modern fitness equipment',
+    'Multi-purpose sports courts',
+    'Outdoor exercise areas',
+    'Yoga & meditation spaces',
+    'Changing rooms & lockers',
+    'Professional trainers'
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-100 pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-600 to-orange-700 text-white py-16">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16 relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute inset-0">
+          <div className="absolute top-8 right-12 w-24 h-24 bg-green-400/20 rounded-full"></div>
+          <div className="absolute bottom-8 left-8 w-32 h-32 bg-green-500/20 rounded-full"></div>
+          <Star className="absolute top-4 left-4 h-8 w-8 text-green-300/50" />
+          <Sparkles className="absolute bottom-4 right-4 h-6 w-6 text-green-300/50" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <Link 
             to="/" 
-            className="inline-flex items-center text-orange-200 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center text-green-200 hover:text-white mb-6 transition-colors"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Home
           </Link>
           
-          <div className="flex items-center mb-6">
-            <Dumbbell className="h-12 w-12 text-orange-200 mr-4" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES Sports & Fitness Club</h1>
-              <p className="text-xl text-orange-200">Wellness, Unity & Expression</p>
+              <div className="flex items-center mb-6">
+                <div className="p-3 md:p-4 bg-green-500 rounded-2xl mr-4">
+                  <Dumbbell className="h-10 w-10 md:h-12 md:w-12 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">ACSES Sports Club</h1>
+                  <p className="text-lg md:text-xl text-green-200">Fitness & Wellness Community</p>
+                </div>
+              </div>
+              
+              <p className="text-base md:text-lg text-green-100 leading-relaxed mb-8">
+                Building healthy habits, fostering teamwork, and creating a vibrant fitness community
+              </p>
+              
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
+                {clubActivities.map((activity, index) => (
+                  <div key={index} className="bg-green-500/30 backdrop-blur-sm rounded-xl p-3 md:p-4 text-center">
+                    <div className="mb-2 flex justify-center">
+                      <div className="p-2 bg-green-600 rounded-lg">
+                        {activity.icon}
+                      </div>
+                    </div>
+                    <h4 className="font-bold text-white text-xs md:text-sm mb-1">{activity.title}</h4>
+                    <p className="text-xs text-green-100">{activity.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Visual representation */}
+            <div className="relative mt-8 lg:mt-0">
+              <div className="bg-white rounded-3xl p-6 md:p-8 shadow-2xl">
+                {/* Sports & fitness illustration */}
+                <div className="w-full h-48 md:h-64 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-green-500/10"></div>
+                  <div className="relative z-10 text-center">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Heart className="h-8 w-8 md:h-10 md:w-10 text-white" />
+                    </div>
+                    <div className="text-green-800 font-bold text-lg mb-2">Sports & Wellness Hub</div>
+                    <div className="text-green-600 text-sm mb-4">Mind • Body • Community</div>
+                    
+                    {/* Activity icons */}
+                    <div className="flex justify-center space-x-3 mb-4">
+                      <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                        <Dumbbell className="h-4 w-4 text-white" />
+                      </div>
+                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <Trophy className="h-4 w-4 text-white" />
+                      </div>
+                      <div className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
+                        <Activity className="h-4 w-4 text-white" />
+                      </div>
+                    </div>
+                    <div className="text-green-700 text-xs font-medium">Comprehensive Fitness</div>
+                  </div>
+                  {/* Floating fitness symbols */}
+                  <div className="absolute top-4 left-4 w-8 h-8 bg-green-300/50 rounded-full flex items-center justify-center">
+                    <Trophy className="h-4 w-4 text-green-700" />
+                  </div>
+                  <div className="absolute bottom-4 right-4 w-6 h-6 bg-green-400/50 rounded-full flex items-center justify-center">
+                    <Star className="h-3 w-3 text-green-700" />
+                  </div>
+                  <div className="absolute top-8 right-8 w-4 h-4 bg-green-500/50 rounded-full"></div>
+                </div>
+                
+                <div className="text-center">
+                  <h3 className="text-lg md:text-xl font-bold text-green-800 mb-2">Active Lifestyle</h3>
+                  <p className="text-green-600 text-sm">Fitness • Sports • Wellness</p>
+                </div>
+              </div>
+              
+              {/* Floating badges */}
+              <div className="absolute -top-4 -right-4 bg-green-500 rounded-full p-3 shadow-xl">
+                <Dumbbell className="h-6 w-6 text-white" />
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-white border-4 border-green-500 rounded-full p-3 shadow-xl">
+                <Heart className="h-6 w-6 text-green-600" />
+              </div>
             </div>
           </div>
-          
-          <p className="text-lg max-w-3xl leading-relaxed">
-            Success thrives on balance. This club promotes physical well-being, unity, and non-academic 
-            expression through fitness and sports—reinforcing discipline, confidence, and community among 
-            Computer Science and Engineering students.
-          </p>
         </div>
       </section>
 
       {/* Main Content */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          {/* Club Overview */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-6">Building Healthy Communities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Why Physical Wellness Matters</h3>
-                <p className="text-slate-600 mb-6">
-                  In the demanding world of Computer Science and Engineering, physical wellness is often 
-                  overlooked. Our Sports & Fitness Club addresses this gap by providing structured 
-                  opportunities for physical activity, stress relief, and community building.
-                </p>
-                
-                <div className="bg-orange-50 border-l-4 border-orange-500 p-4">
-                  <h4 className="font-bold text-orange-800 mb-2">Core Philosophy</h4>
-                  <p className="text-orange-700 text-sm">
-                    "A healthy body supports a sharp mind. We believe in nurturing both for complete 
-                    student development and academic excellence."
-                  </p>
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Club Activities</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {clubActivities.map((activity, index) => (
-                    <div key={index} className="text-center p-4 bg-orange-50 rounded-lg">
-                      <div className="mb-2 flex justify-center">
-                        {activity.icon}
-                      </div>
-                      <h4 className="font-bold text-orange-800 text-sm mb-1">{activity.title}</h4>
-                      <p className="text-xs text-slate-600">{activity.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Programs */}
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Fitness & Sports Programs</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-4">Fitness Programs</h2>
+              <p className="text-green-600 max-w-2xl mx-auto">
+                Comprehensive programs for every fitness level and interest
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {programs.map((program, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-bold text-orange-800 mb-3">{program.title}</h3>
-                  <p className="text-slate-600 mb-4">{program.description}</p>
-                  <ul className="space-y-2">
-                    {program.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                        <CheckCircle className="h-4 w-4 text-orange-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
+                <div key={index} className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div className="flex items-center mb-6">
+                    <div className="p-3 bg-green-100 rounded-xl mr-4">
+                      {program.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg md:text-xl font-bold text-green-800">{program.title}</h3>
+                      <p className="text-green-600 text-sm">{program.description}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-3">
+                    {program.features.map((feature, idx) => (
+                      <div key={idx} className="bg-green-50 rounded-lg p-3 text-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mx-auto mb-1" />
+                        <span className="text-green-700 text-xs font-medium">{feature}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Available Resources */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Current Resources & Activities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-orange-50 rounded-lg">
-                <h3 className="font-bold text-orange-800 mb-2">Existing Sports Fields</h3>
-                <p className="text-sm text-slate-600">Utilizing available campus sports facilities for football, basketball and general activities</p>
+          {/* Facilities */}
+          <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-6 md:p-8 mb-12">
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-green-600" />
               </div>
-              <div className="text-center p-6 bg-orange-50 rounded-lg">
-                <h3 className="font-bold text-orange-800 mb-2">Group Activities</h3>
-                <p className="text-sm text-slate-600">Organized team sports, fitness sessions and wellness programs using current spaces</p>
-              </div>
-              <div className="text-center p-6 bg-orange-50 rounded-lg">
-                <h3 className="font-bold text-orange-800 mb-2">Community Partnerships</h3>
-                <p className="text-sm text-slate-600">Collaborating with local gyms and fitness centers for member access</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Benefits & Schedule */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Member Benefits</h2>
-              <ul className="space-y-3">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-600">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
+              <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-4">Club Facilities</h2>
+              <p className="text-green-600 max-w-2xl mx-auto">
+                Modern equipment and spaces designed for optimal fitness experience
+              </p>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Weekly Schedule</h2>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
-                  <span className="font-medium text-slate-800">Monday - Friday</span>
-                  <span className="text-sm text-orange-600">6:00 AM - 8:00 AM</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {facilities.map((facility, index) => (
+                <div key={index} className="bg-green-50 rounded-xl p-6 text-center hover:bg-green-100 transition-colors">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="h-6 w-6 text-white" />
+                  </div>
+                  <h4 className="font-bold text-green-800 mb-2 text-sm md:text-base">{facility}</h4>
                 </div>
-                <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
-                  <span className="font-medium text-slate-800">Evening Sessions</span>
-                  <span className="text-sm text-orange-600">5:00 PM - 7:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
-                  <span className="font-medium text-slate-800">Weekend Sports</span>
-                  <span className="text-sm text-orange-600">9:00 AM - 12:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
-                  <span className="font-medium text-slate-800">Wellness Sessions</span>
-                  <span className="text-sm text-orange-600">Flexible Timing</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Membership */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Membership Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Target className="h-8 w-8 text-orange-600" />
+          {/* Membership Benefits */}
+          <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-6 md:p-8 mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-8 text-center">Membership Journey</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {[
+                { step: 1, title: 'Join', desc: 'Become a member', icon: <Users className="h-6 w-6" /> },
+                { step: 2, title: 'Train', desc: 'Start your fitness journey', icon: <Dumbbell className="h-6 w-6" /> },
+                { step: 3, title: 'Compete', desc: 'Join tournaments', icon: <Trophy className="h-6 w-6" /> },
+                { step: 4, title: 'Excel', desc: 'Achieve fitness goals', icon: <Star className="h-6 w-6" /> }
+              ].map((item, index) => (
+                <div key={index} className="text-center relative">
+                  {index < 3 && (
+                    <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-green-300 z-0"></div>
+                  )}
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+                      {item.icon}
+                    </div>
+                    <h3 className="font-bold text-green-800 mb-2">{item.title}</h3>
+                    <p className="text-sm text-green-600">{item.desc}</p>
+                  </div>
                 </div>
-                <h3 className="font-bold text-orange-800 mb-2">Free Membership</h3>
-                <p className="text-sm text-slate-600">All ACSES members get free access to club activities</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-orange-600" />
-                </div>
-                <h3 className="font-bold text-orange-800 mb-2">Open to All</h3>
-                <p className="text-sm text-slate-600">Welcoming students of all fitness levels and abilities</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-8 w-8 text-orange-600" />
-                </div>
-                <h3 className="font-bold text-orange-800 mb-2">Community Focus</h3>
-                <p className="text-sm text-slate-600">Building friendships and support networks through sports</p>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Impact Metrics */}
-          <div className="bg-gradient-to-r from-orange-800 to-orange-900 rounded-xl p-8 text-white mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-center">Expected Impact</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold text-orange-200 mb-2">300+</div>
-                <div className="text-white/90">Active Members</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-orange-200 mb-2">85%</div>
-                <div className="text-white/90">Improved Wellness</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-orange-200 mb-2">50+</div>
-                <div className="text-white/90">Weekly Activities</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-orange-200 mb-2">100%</div>
-                <div className="text-white/90">Stress Reduction</div>
+          {/* Impact Metrics Visual */}
+          <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-6 md:p-8 text-white mb-12 relative overflow-hidden">
+            {/* Background decorations */}
+            <div className="absolute inset-0">
+              <div className="absolute top-4 right-8 w-20 h-20 bg-green-400/20 rounded-full"></div>
+              <div className="absolute bottom-6 left-6 w-16 h-16 bg-green-500/20 rounded-full"></div>
+              <Sparkles className="absolute top-6 left-8 h-8 w-8 text-green-300/50" />
+            </div>
+            
+            <div className="relative z-10">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Club Impact</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6">
+                  <div className="text-2xl md:text-4xl font-bold text-green-200 mb-2">300+</div>
+                  <div className="text-green-100 text-sm md:text-base">Active Members</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6">
+                  <div className="text-2xl md:text-4xl font-bold text-green-200 mb-2">15+</div>
+                  <div className="text-green-100 text-sm md:text-base">Sports Activities</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6">
+                  <div className="text-2xl md:text-4xl font-bold text-green-200 mb-2">25+</div>
+                  <div className="text-green-100 text-sm md:text-base">Weekly Sessions</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6">
+                  <div className="text-2xl md:text-4xl font-bold text-green-200 mb-2">95%</div>
+                  <div className="text-green-100 text-sm md:text-base">Satisfaction</div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Call to Action */}
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Join the Wellness Movement</h2>
-            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-              Support physical wellness and community building through sports and fitness activities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/#feedback" 
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Support This Initiative
-              </a>
-              <Link 
-                to="/policies/buildx-program" 
-                className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Next: BuildX Program
-              </Link>
+            <div className="bg-white border-2 border-green-200 rounded-3xl p-6 md:p-8 shadow-lg">
+              <div className="mb-6">
+                <div className="w-16 md:w-20 h-16 md:h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Dumbbell className="h-8 w-8 md:h-10 md:w-10 text-green-600" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-4">Join the Wellness Movement</h2>
+                <p className="text-green-600 mb-8 max-w-2xl mx-auto">
+                  Start your fitness journey with ACSES Sports Club and become part of a thriving wellness community
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="https://chat.whatsapp.com/HFGrjDWYzNqEmgj79o4xTh" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 md:px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
+                >
+                  <Sparkles className="h-5 w-5" />
+                  Join the Movement
+                </a>
+                <Link 
+                  to="/policies/fab-lab" 
+                  className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-3 px-6 md:px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
+                >
+                  Next: Fab Lab
+                  <ArrowLeft className="h-5 w-5 rotate-180" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
