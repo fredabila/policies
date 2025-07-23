@@ -83,8 +83,8 @@ export const FlexiNet: React.FC = () => {
                 <div className="p-4 bg-green-500 rounded-2xl mr-4">
                   <Wifi className="h-12 w-12 text-white" />
                 </div>
-                <div>
-                  <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES FlexiNet</h1>
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES FlexiNet</h1>
                   <p className="text-xl text-green-200">Affordable Internet for All</p>
                 </div>
               </div>
@@ -205,7 +205,7 @@ export const FlexiNet: React.FC = () => {
                     <CheckCircle className="h-6 w-6 text-white" />
                   </div>
                   <h4 className="font-bold text-green-800 mb-2">{benefit}</h4>
-                </div>
+              </div>
               ))}
             </div>
           </div>
@@ -292,21 +292,21 @@ export const FlexiNet: React.FC = () => {
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/#feedback" 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/#feedback" 
                   className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   <Sparkles className="h-5 w-5" />
                   Support FlexiNet
-                </a>
-                <Link 
-                  to="/policies/academic-care-fund" 
+              </a>
+              <Link 
+                to="/policies/academic-care-fund" 
                   className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   Next: Boame Fund
                   <ArrowLeft className="h-5 w-5 rotate-180" />
-                </Link>
+              </Link>
               </div>
             </div>
           </div>

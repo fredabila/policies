@@ -94,8 +94,8 @@ export const LaunchPad: React.FC = () => {
               <div className="flex items-center mb-6">
                 <div className="p-4 bg-green-500 rounded-2xl mr-4">
                   <Rocket className="h-12 w-12 text-white" />
-                </div>
-                <div>
+        </div>
+              <div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES LaunchPad</h1>
                   <p className="text-xl text-green-200">Where Ideas Take Flight</p>
                 </div>
@@ -105,18 +105,18 @@ export const LaunchPad: React.FC = () => {
                 Transforming student ideas into successful ventures and celebrating outstanding achievements
               </p>
               
-              <div className="grid grid-cols-2 gap-4">
-                {programComponents.map((component, index) => (
+                <div className="grid grid-cols-2 gap-4">
+                  {programComponents.map((component, index) => (
                   <div key={index} className="bg-green-500/30 backdrop-blur-sm rounded-xl p-4 text-center">
-                    <div className="mb-2 flex justify-center">
+                      <div className="mb-2 flex justify-center">
                       <div className="p-2 bg-green-600 rounded-lg">
                         {component.icon}
                       </div>
                     </div>
                     <h4 className="font-bold text-white text-sm mb-1">{component.title}</h4>
                     <p className="text-xs text-green-100">{component.description}</p>
-                  </div>
-                ))}
+                    </div>
+                  ))}
               </div>
             </div>
             
@@ -248,7 +248,7 @@ export const LaunchPad: React.FC = () => {
                     <Star className="h-6 w-6 text-white" />
                   </div>
                   <h4 className="font-bold text-green-800 mb-2 text-sm">{category}</h4>
-                </div>
+              </div>
               ))}
             </div>
           </div>
@@ -263,8 +263,8 @@ export const LaunchPad: React.FC = () => {
               <p className="text-green-600 max-w-2xl mx-auto">
                 Comprehensive support for aspiring entrepreneurs
               </p>
-            </div>
-            
+          </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="bg-green-50 rounded-xl p-6">
@@ -315,15 +315,15 @@ export const LaunchPad: React.FC = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                   <div className="text-4xl font-bold text-green-200 mb-2">100+</div>
                   <div className="text-green-100">Students Spotlighted</div>
-                </div>
+              </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                   <div className="text-4xl font-bold text-green-200 mb-2">₵1M+</div>
                   <div className="text-green-100">Funding Raised</div>
-                </div>
+              </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                   <div className="text-4xl font-bold text-green-200 mb-2">80%</div>
                   <div className="text-green-100">Success Rate</div>
-                </div>
+              </div>
               </div>
             </div>
           </div>
@@ -338,24 +338,24 @@ export const LaunchPad: React.FC = () => {
                 <h2 className="text-3xl font-bold text-green-800 mb-4">Ready to Launch?</h2>
                 <p className="text-green-600 mb-8 max-w-2xl mx-auto">
                   Join ACSES LaunchPad and transform your innovative ideas into successful ventures
-                </p>
+            </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/#feedback" 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/#feedback" 
                   className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   <Sparkles className="h-5 w-5" />
                   Support LaunchPad
-                </a>
-                <Link 
+              </a>
+              <Link 
                   to="/policies/buildx-program" 
                   className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   Next: BuildX Program
                   <ArrowLeft className="h-5 w-5 rotate-180" />
-                </Link>
+              </Link>
               </div>
             </div>
           </div>

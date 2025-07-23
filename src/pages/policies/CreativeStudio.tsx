@@ -127,25 +127,7 @@ export const CreativeStudio: React.FC = () => {
             </div>
           </div>
 
-          {/* Equipment & Facilities */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Equipment & Facilities</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {equipment.map((category, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-bold text-pink-800 mb-3">{category.category}</h3>
-                  <ul className="space-y-2">
-                    {category.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-sm text-slate-600">
-                        <CheckCircle className="h-4 w-4 text-pink-500 mr-2 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
+   
 
           {/* Services Offered */}
           <div className="bg-white rounded-xl shadow-lg p-8 mb-12">

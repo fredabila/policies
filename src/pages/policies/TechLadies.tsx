@@ -87,8 +87,8 @@ export const TechLadies: React.FC = () => {
               <div className="flex items-center mb-6">
                 <div className="p-4 bg-green-500 rounded-2xl mr-4">
                   <Crown className="h-12 w-12 text-white" />
-                </div>
-                <div>
+        </div>
+              <div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">ACSES Tech Ladies</h1>
                   <p className="text-xl text-green-200">Empowering Women in Technology</p>
                 </div>
@@ -98,18 +98,18 @@ export const TechLadies: React.FC = () => {
                 Creating opportunities, building confidence, and fostering excellence for women in tech
               </p>
               
-              <div className="grid grid-cols-2 gap-4">
-                {programPillars.map((pillar, index) => (
+                <div className="grid grid-cols-2 gap-4">
+                  {programPillars.map((pillar, index) => (
                   <div key={index} className="bg-green-500/30 backdrop-blur-sm rounded-xl p-4 text-center">
-                    <div className="mb-2 flex justify-center">
+                      <div className="mb-2 flex justify-center">
                       <div className="p-2 bg-green-600 rounded-lg">
                         {pillar.icon}
                       </div>
                     </div>
                     <h4 className="font-bold text-white text-sm mb-1">{pillar.title}</h4>
                     <p className="text-xs text-green-100">{pillar.description}</p>
-                  </div>
-                ))}
+                    </div>
+                  ))}
               </div>
             </div>
             
@@ -305,8 +305,8 @@ export const TechLadies: React.FC = () => {
               <div className="absolute top-4 right-8 w-20 h-20 bg-green-400/20 rounded-full"></div>
               <div className="absolute bottom-6 left-6 w-16 h-16 bg-green-500/20 rounded-full"></div>
               <Sparkles className="absolute top-6 left-8 h-8 w-8 text-green-300/50" />
-            </div>
-            
+          </div>
+
             <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-8 text-center">Expected Impact</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -321,11 +321,11 @@ export const TechLadies: React.FC = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                   <div className="text-4xl font-bold text-green-200 mb-2">80%</div>
                   <div className="text-green-100">Career Growth</div>
-                </div>
+              </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                   <div className="text-4xl font-bold text-green-200 mb-2">100%</div>
                   <div className="text-green-100">Support</div>
-                </div>
+              </div>
               </div>
             </div>
           </div>
@@ -343,21 +343,21 @@ export const TechLadies: React.FC = () => {
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/#feedback" 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/#feedback" 
                   className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   <Sparkles className="h-5 w-5" />
                   Support Tech Ladies
-                </a>
-                <Link 
-                  to="/policies/sports-fitness" 
+              </a>
+              <Link 
+                to="/policies/sports-fitness" 
                   className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   Next: Sports Club
                   <ArrowLeft className="h-5 w-5 rotate-180" />
-                </Link>
+              </Link>
               </div>
             </div>
           </div>

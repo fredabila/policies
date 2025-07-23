@@ -24,7 +24,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'flexi-net',
       icon: <Wifi className="h-8 w-8" />,
-      title: 'FlexiNet',
+      title: 'ACSES FlexiNet',
       subtitle: 'Affordable Internet',
       description: 'Non-expiry data bundles',
       color: 'green',
@@ -33,7 +33,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'academic-care-fund',
       icon: <Heart className="h-8 w-8" />,
-      title: 'Boame Fund',
+      title: 'ACSES Care Fund',
       subtitle: 'Emergency Support',
       description: 'Financial aid for students',
       color: 'green',
@@ -42,7 +42,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'allawa-plus',
       icon: <Award className="h-8 w-8" />,
-      title: 'Allawa+',
+      title: 'ACSES Allawa+',
       subtitle: 'Course Rep Support',
       description: 'Empowering representatives',
       color: 'green',
@@ -51,7 +51,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'tech-ladies',
       icon: <Users className="h-8 w-8" />,
-      title: 'Tech Ladies',
+      title: 'ACSES Tech Ladies',
       subtitle: 'Women in Tech',
       description: 'Mentorship program',
       color: 'green',
@@ -60,7 +60,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'sports-fitness',
       icon: <Dumbbell className="h-8 w-8" />,
-      title: 'Sports Club',
+      title: 'ACSES Sports Club',
       subtitle: 'Wellness & Unity',
       description: 'Physical wellness',
       color: 'green',
@@ -69,7 +69,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'buildx-program',
       icon: <Wrench className="h-8 w-8" />,
-      title: 'BuildX',
+      title: 'ACSES BuildX',
       subtitle: 'Life Skills',
       description: 'Technical training',
       color: 'green',
@@ -78,7 +78,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'learn-and-earn',
       icon: <DollarSign className="h-8 w-8" />,
-      title: 'Learn & Earn',
+      title: 'ACSES Learn & Earn',
       subtitle: 'Skills Marketplace',
       description: 'Monetize talents',
       color: 'green',
@@ -87,7 +87,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'creative-studio',
       icon: <Palette className="h-8 w-8" />,
-      title: 'Creative Studio',
+      title: 'ACSES Creative Studio',
       subtitle: 'Digital Media',
       description: 'Content creation',
       color: 'green',
@@ -96,7 +96,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'power-circle',
       icon: <Network className="h-8 w-8" />,
-      title: 'PowerCircle',
+      title: 'ACSES PowerCircle',
       subtitle: 'Alumni Network',
       description: 'Career opportunities',
       color: 'green',
@@ -105,7 +105,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'defensive-security',
       icon: <Shield className="h-8 w-8" />,
-      title: 'DefSec Team',
+      title: 'ACSES DefSec Team',
       subtitle: 'Cybersecurity',
       description: 'Digital defense',
       color: 'green',
@@ -114,7 +114,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'fab-lab',
       icon: <Cpu className="h-8 w-8" />,
-      title: 'Fab Lab',
+      title: 'ACSES Fab Lab',
       subtitle: 'Innovation Hub',
       description: '3D printing & VR',
       color: 'green',
@@ -123,7 +123,7 @@ export const PolicyOverview: React.FC = () => {
     {
       id: 'launchpad',
       icon: <Rocket className="h-8 w-8" />,
-      title: 'LaunchPad',
+      title: 'ACSES LaunchPad',
       subtitle: 'Startup Support',
       description: 'Business incubation',
       color: 'green',
@@ -259,24 +259,24 @@ export const PolicyOverview: React.FC = () => {
           
           <div className="relative z-10">
             <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform ACSES?
-            </h3>
+            Ready to Transform ACSES?
+          </h3>
             <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
               Join us in building the future of student experience
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="#feedback" 
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="#feedback" 
                 className="bg-white text-green-700 hover:bg-green-50 font-bold py-3 px-8 rounded-full transition-all hover:shadow-lg hover:scale-105"
-              >
-                Share Your Ideas
-              </a>
-              <a 
-                href="#vision" 
+            >
+              Share Your Ideas
+            </a>
+            <a 
+              href="#vision" 
                 className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-all hover:scale-105"
-              >
-                Our Vision
-              </a>
+            >
+              Our Vision
+            </a>
             </div>
           </div>
         </div>

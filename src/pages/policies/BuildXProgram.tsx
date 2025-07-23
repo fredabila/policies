@@ -95,8 +95,8 @@ export const BuildXProgram: React.FC = () => {
               <div className="flex items-center mb-6">
                 <div className="p-3 md:p-4 bg-green-500 rounded-2xl mr-4">
                   <Wrench className="h-10 w-10 md:h-12 md:w-12 text-white" />
-                </div>
-                <div>
+        </div>
+              <div>
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">BuildX Program</h1>
                   <p className="text-lg md:text-xl text-green-200">Technical Skills & Certifications</p>
                 </div>
@@ -107,17 +107,17 @@ export const BuildXProgram: React.FC = () => {
               </p>
               
               <div className="grid grid-cols-2 gap-3 md:gap-4">
-                {skillTracks.map((track, index) => (
+                  {skillTracks.map((track, index) => (
                   <div key={index} className="bg-green-500/30 backdrop-blur-sm rounded-xl p-3 md:p-4 text-center">
-                    <div className="mb-2 flex justify-center">
+                      <div className="mb-2 flex justify-center">
                       <div className="p-2 bg-green-600 rounded-lg">
                         {track.icon}
                       </div>
                     </div>
                     <h4 className="font-bold text-white text-xs md:text-sm mb-1">{track.title}</h4>
                     <p className="text-xs text-green-100">{track.description}</p>
-                  </div>
-                ))}
+                    </div>
+                  ))}
               </div>
             </div>
             
@@ -232,8 +232,8 @@ export const BuildXProgram: React.FC = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
+              </div>
+                </div>
 
           {/* Program Benefits */}
           <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-6 md:p-8 mb-12">
@@ -245,14 +245,14 @@ export const BuildXProgram: React.FC = () => {
               <p className="text-green-600 max-w-2xl mx-auto">
                 Comprehensive advantages for career-ready technical professionals
               </p>
-            </div>
+                </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-green-50 rounded-xl p-6 text-center hover:bg-green-100 transition-colors">
                   <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="h-6 w-6 text-white" />
-                  </div>
+              </div>
                   <h4 className="font-bold text-green-800 mb-2 text-sm md:text-base">{benefit}</h4>
                 </div>
               ))}
@@ -278,15 +278,15 @@ export const BuildXProgram: React.FC = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6">
                   <div className="text-2xl md:text-4xl font-bold text-green-200 mb-2">10+</div>
                   <div className="text-green-100 text-sm md:text-base">Certifications</div>
-                </div>
+              </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6">
                   <div className="text-2xl md:text-4xl font-bold text-green-200 mb-2">85%</div>
                   <div className="text-green-100 text-sm md:text-base">Employment Rate</div>
-                </div>
+              </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6">
                   <div className="text-2xl md:text-4xl font-bold text-green-200 mb-2">20+</div>
                   <div className="text-green-100 text-sm md:text-base">Industry Partners</div>
-                </div>
+              </div>
               </div>
             </div>
           </div>
@@ -301,26 +301,26 @@ export const BuildXProgram: React.FC = () => {
                 <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-4">Build Your Future</h2>
                 <p className="text-green-600 mb-8 max-w-2xl mx-auto">
                   Join BuildX Program and develop the technical skills employers demand
-                </p>
+            </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
                   href="https://chat.whatsapp.com/HFGrjDWYzNqEmgj79o4xTh" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 md:px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   <Sparkles className="h-5 w-5" />
                   Join BuildX
-                </a>
-                <Link 
-                  to="/policies/learn-and-earn" 
+              </a>
+              <Link 
+                to="/policies/learn-and-earn" 
                   className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-3 px-6 md:px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
-                  Next: Learn & Earn
+              >
+                Next: Learn & Earn
                   <ArrowLeft className="h-5 w-5 rotate-180" />
-                </Link>
+              </Link>
               </div>
             </div>
           </div>

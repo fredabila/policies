@@ -188,11 +188,11 @@ export const GoldenAIM: React.FC = () => {
                 <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
                   <Globe className="h-8 w-8 mx-auto mb-2" />
                   <div className="text-sm font-semibold">Web Portal</div>
-                </div>
+                      </div>
                 <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
                   <Database className="h-8 w-8 mx-auto mb-2" />
                   <div className="text-sm font-semibold">Database</div>
-                </div>
+                    </div>
                 <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
                   <Zap className="h-8 w-8 mx-auto mb-2" />
                   <div className="text-sm font-semibold">API</div>
@@ -264,8 +264,8 @@ export const GoldenAIM: React.FC = () => {
               <div className="absolute top-4 right-8 w-20 h-20 bg-green-400/20 rounded-full"></div>
               <div className="absolute bottom-6 left-6 w-16 h-16 bg-green-500/20 rounded-full"></div>
               <Sparkles className="absolute top-6 left-8 h-8 w-8 text-green-300/50" />
-            </div>
-            
+          </div>
+
             <div className="relative z-10">
               <h2 className="text-3xl font-bold mb-8 text-center">Expected Impact</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -276,7 +276,7 @@ export const GoldenAIM: React.FC = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                   <div className="text-4xl font-bold text-green-200 mb-2">24/7</div>
                   <div className="text-green-100">Access</div>
-                </div>
+              </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                   <div className="text-4xl font-bold text-green-200 mb-2">10K+</div>
                   <div className="text-green-100">Users</div>
@@ -306,11 +306,11 @@ export const GoldenAIM: React.FC = () => {
                   <div className="relative z-10">
                     <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
                       {item.icon}
-                    </div>
+              </div>
                     <h3 className="font-bold text-green-800 mb-2">{item.title}</h3>
                     <p className="text-sm text-green-600">{item.desc}</p>
-                  </div>
-                </div>
+              </div>
+            </div>
               ))}
             </div>
           </div>
@@ -325,24 +325,24 @@ export const GoldenAIM: React.FC = () => {
                 <h2 className="text-3xl font-bold text-green-800 mb-4">The Future is Golden</h2>
                 <p className="text-green-600 mb-8 max-w-2xl mx-auto">
                   Join us in revolutionizing academic management with the Golden AIM system
-                </p>
+            </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/#feedback" 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/#feedback" 
                   className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   <Sparkles className="h-5 w-5" />
                   Support Golden AIM
-                </a>
-                <Link 
+              </a>
+              <Link 
                   to="/policies/flexi-net" 
                   className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   Next: FlexiNet
                   <ArrowLeft className="h-5 w-5 rotate-180" />
-                </Link>
+              </Link>
               </div>
             </div>
           </div>

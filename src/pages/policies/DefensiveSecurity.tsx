@@ -102,6 +102,15 @@ export const DefensiveSecurity: React.FC = () => {
                   response. Our program combines theoretical knowledge with practical, hands-on experience 
                   in a controlled environment.
                 </p>
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4">
+                  <div className="flex items-center">
+                    <Shield className="h-5 w-5 text-blue-500 mr-2" />
+                    <h4 className="font-bold text-blue-800">Collaboration with Cybersecurity Club</h4>
+                  </div>
+                  <p className="text-blue-700 text-sm mt-1">
+                    This initiative will actively involve the Cybersecurity Club, leveraging their expertise and community to enhance training, mentorship, and real-world project opportunities for all participants.
+                  </p>
+                </div>
                 
                 <div className="bg-red-50 border-l-4 border-red-500 p-4">
                   <div className="flex items-center">

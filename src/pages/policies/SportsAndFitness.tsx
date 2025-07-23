@@ -88,8 +88,8 @@ export const SportsAndFitness: React.FC = () => {
               <div className="flex items-center mb-6">
                 <div className="p-3 md:p-4 bg-green-500 rounded-2xl mr-4">
                   <Dumbbell className="h-10 w-10 md:h-12 md:w-12 text-white" />
-                </div>
-                <div>
+        </div>
+              <div>
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">ACSES Sports Club</h1>
                   <p className="text-lg md:text-xl text-green-200">Fitness & Wellness Community</p>
                 </div>
@@ -100,17 +100,17 @@ export const SportsAndFitness: React.FC = () => {
               </p>
               
               <div className="grid grid-cols-2 gap-3 md:gap-4">
-                {clubActivities.map((activity, index) => (
+                  {clubActivities.map((activity, index) => (
                   <div key={index} className="bg-green-500/30 backdrop-blur-sm rounded-xl p-3 md:p-4 text-center">
-                    <div className="mb-2 flex justify-center">
+                      <div className="mb-2 flex justify-center">
                       <div className="p-2 bg-green-600 rounded-lg">
                         {activity.icon}
                       </div>
                     </div>
                     <h4 className="font-bold text-white text-xs md:text-sm mb-1">{activity.title}</h4>
                     <p className="text-xs text-green-100">{activity.description}</p>
-                  </div>
-                ))}
+                    </div>
+                  ))}
               </div>
             </div>
             
@@ -207,29 +207,7 @@ export const SportsAndFitness: React.FC = () => {
             </div>
           </div>
 
-          {/* Facilities */}
-          <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-6 md:p-8 mb-12">
-            <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="h-8 w-8 text-green-600" />
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-4">Club Facilities</h2>
-              <p className="text-green-600 max-w-2xl mx-auto">
-                Modern equipment and spaces designed for optimal fitness experience
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {facilities.map((facility, index) => (
-                <div key={index} className="bg-green-50 rounded-xl p-6 text-center hover:bg-green-100 transition-colors">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="h-6 w-6 text-white" />
-                  </div>
-                  <h4 className="font-bold text-green-800 mb-2 text-sm md:text-base">{facility}</h4>
-                </div>
-              ))}
-            </div>
-          </div>
+
 
           {/* Membership Benefits */}
           <div className="bg-white border-2 border-green-200 rounded-3xl shadow-lg p-6 md:p-8 mb-12">
@@ -248,10 +226,10 @@ export const SportsAndFitness: React.FC = () => {
                   <div className="relative z-10">
                     <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
                       {item.icon}
-                    </div>
+                </div>
                     <h3 className="font-bold text-green-800 mb-2">{item.title}</h3>
                     <p className="text-sm text-green-600">{item.desc}</p>
-                  </div>
+              </div>
                 </div>
               ))}
             </div>
@@ -276,15 +254,15 @@ export const SportsAndFitness: React.FC = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6">
                   <div className="text-2xl md:text-4xl font-bold text-green-200 mb-2">15+</div>
                   <div className="text-green-100 text-sm md:text-base">Sports Activities</div>
-                </div>
+              </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6">
                   <div className="text-2xl md:text-4xl font-bold text-green-200 mb-2">25+</div>
                   <div className="text-green-100 text-sm md:text-base">Weekly Sessions</div>
-                </div>
+              </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6">
                   <div className="text-2xl md:text-4xl font-bold text-green-200 mb-2">95%</div>
                   <div className="text-green-100 text-sm md:text-base">Satisfaction</div>
-                </div>
+              </div>
               </div>
             </div>
           </div>
@@ -299,26 +277,26 @@ export const SportsAndFitness: React.FC = () => {
                 <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-4">Join the Wellness Movement</h2>
                 <p className="text-green-600 mb-8 max-w-2xl mx-auto">
                   Start your fitness journey with ACSES Sports Club and become part of a thriving wellness community
-                </p>
+            </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
                   href="https://chat.whatsapp.com/HFGrjDWYzNqEmgj79o4xTh" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 md:px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   <Sparkles className="h-5 w-5" />
                   Join the Movement
-                </a>
-                <Link 
+              </a>
+              <Link 
                   to="/policies/fab-lab" 
                   className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-50 font-bold py-3 px-6 md:px-8 rounded-full transition-colors inline-flex items-center justify-center gap-2"
-                >
+              >
                   Next: Fab Lab
                   <ArrowLeft className="h-5 w-5 rotate-180" />
-                </Link>
+              </Link>
               </div>
             </div>
           </div>

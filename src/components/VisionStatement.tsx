@@ -98,14 +98,14 @@ export const VisionStatement: React.FC = () => {
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-              {visionPoints.map((point, index) => (
-                <div 
-                  key={index}
+            {visionPoints.map((point, index) => (
+              <div 
+                key={index}
                   className="bg-white border-2 border-green-200 rounded-2xl p-6 hover:shadow-lg hover:border-green-400 transition-all duration-300 hover:scale-105"
-                >
-                  <div className="mb-4">
+              >
+                <div className="mb-4">
                     <div className="p-3 bg-green-100 rounded-full w-fit">
-                      {point.icon}
+                  {point.icon}
                     </div>
                   </div>
                   <h4 className="text-lg font-bold text-green-800 mb-2">{point.title}</h4>

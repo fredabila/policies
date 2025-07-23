@@ -26,8 +26,8 @@ export const CandidateIntro: React.FC = () => {
             <div className="bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105">
               {/* Actual photo */}
               <div className="h-64 md:h-72 lg:h-80 relative overflow-hidden">
-                <img 
-                  src="https://i.ibb.co/pCr2VBf/topkoderr.jpg" 
+                <img
+                  src="https://i.ibb.co/pCr2VBf/topkoderr.jpg"
                   alt="Samuel Oppong Kyekyeku"
                   className="w-full h-full object-cover object-center "
                 />
@@ -49,7 +49,7 @@ export const CandidateIntro: React.FC = () => {
                     "Top Koder"
                   </span>
                 </div>
-                
+
                 <div className="space-y-3 md:space-y-4 mb-6">
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
@@ -75,8 +75,8 @@ export const CandidateIntro: React.FC = () => {
                   </div>
                   <div className="flex items-center text-green-600">
                     <Phone className="h-4 w-4 mr-2" />
-                    <a href="tel:+233542184694" className="text-xs md:text-sm hover:underline">
-                      +233 542 184 694
+                    <a href="tel:+233599539127" className="text-xs md:text-sm hover:underline">
+                      +233 599 539 127
                     </a>
                   </div>
                 </div>
@@ -89,8 +89,8 @@ export const CandidateIntro: React.FC = () => {
             <div className="bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105">
               {/* Actual photo */}
               <div className="h-64 md:h-72 lg:h-80 relative overflow-hidden">
-                <img 
-                  src="https://i.ibb.co/BKQ5Pjsr/VPFRED.jpg" 
+                <img
+                  src="https://i.ibb.co/BKQ5Pjsr/VPFRED.jpg"
                   alt="Frederick Abila"
                   className="w-full h-full object-cover object-top"
                 />
@@ -112,7 +112,7 @@ export const CandidateIntro: React.FC = () => {
                     "Community Builder"
                   </span>
                 </div>
-                
+
                 <div className="space-y-3 md:space-y-4 mb-6">
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
@@ -138,8 +138,8 @@ export const CandidateIntro: React.FC = () => {
                   </div>
                   <div className="flex items-center text-green-600">
                     <Phone className="h-4 w-4 mr-2" />
-                    <a href="tel:+233599539127" className="text-xs md:text-sm hover:underline">
-                      +233 599 539 127
+                    <a href="tel:+233551580558" className="text-xs md:text-sm hover:underline">
+                      +233 551 580 558
                     </a>
                   </div>
                 </div>
@@ -157,17 +157,17 @@ export const CandidateIntro: React.FC = () => {
               <div className="absolute bottom-6 left-6 w-12 h-12 md:w-16 md:h-16 bg-green-500/20 rounded-full"></div>
               <Sparkles className="absolute top-6 left-8 h-6 w-6 md:h-8 md:w-8 text-green-300/50" />
             </div>
-            
+
             <div className="relative z-10 text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="h-8 w-8 md:h-10 md:w-10 text-green-600" />
               </div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Our Shared Vision</h3>
               <p className="text-lg md:text-xl text-green-100 mb-6 max-w-3xl mx-auto">
-                Together, we bring complementary strengths: technical innovation and community care, 
+                Together, we bring complementary strengths: technical innovation and community care,
                 united in our commitment to student success.
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
                   <Code className="h-6 w-6 md:h-8 md:w-8 text-green-200 mx-auto mb-3" />
